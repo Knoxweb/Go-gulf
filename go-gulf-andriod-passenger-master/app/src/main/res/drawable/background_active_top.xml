@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+
+    <solid android:color="@color/text_field_new_transparency"/>
+
+    <stroke
+        android:width="@dimen/m_2dp"
+        android:color="@color/black"/>
+    <solid android:color="@color/container"/>
+
+    <corners android:topLeftRadius="@dimen/background_list_large_radius"
+        android:topRightRadius="@dimen/background_list_large_radius"
+        android:bottomLeftRadius="@dimen/background_list_small_radius"
+        android:bottomRightRadius="@dimen/background_list_small_radius"/>
+
+</shape>

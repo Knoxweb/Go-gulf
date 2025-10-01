@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="done"
+            type="String" />
+
+        <variable
+            name="clicked"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="onBackPressed"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        style="?attr/materialCardViewFilledStyle"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@android:color/transparent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:onClick="@{onBackPressed}"
+                android:src="@drawable/ic_toolbar_back"
+                app:tint="@color/btnGS"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/titleName"
+                style="@style/textStyle20"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/av_medium_500"
+                android:lineSpacingMultiplier="1.1"
+                android:text="@{title}"
+                android:gravity="center"
+                android:textColor="@color/btnGS"
+                tools:text="This is"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/doneButton"
+                style="@style/textStyle16m"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp"
+                android:layout_marginEnd="6dp"
+                android:onClick="@{clicked}"
+                android:text="@{done}"
+                tools:text="Done"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/btnGS"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

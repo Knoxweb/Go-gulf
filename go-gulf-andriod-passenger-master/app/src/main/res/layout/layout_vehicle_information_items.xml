@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="fleets"
+            type="com.gogulf.passenger.app.data.model.FleetNew" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/vehicleInformation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/m_5dp"
+        android:paddingVertical="@dimen/m_5dp">
+
+        <ImageView
+            android:id="@+id/carImageView"
+            android:layout_width="@dimen/m_150dp"
+            android:layout_height="@dimen/m_90dp"
+            imageFromGlide="@{fleets.image_url}"
+            android:contentDescription="@string/vehicle_images"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/vehicleType"-->
+<!--            android:layout_width="@dimen/m_0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginEnd="@dimen/m_20dp"-->
+<!--            android:ellipsize="end"-->
+<!--            android:fontFamily="@font/av_regular_400"-->
+<!--            android:maxLines="1"-->
+<!--            android:text="@{fleets.name}"-->
+<!--            android:textColor="@color/primaryColor"-->
+<!--            android:textSize="@dimen/t_16sp"-->
+<!--            app:layout_constraintBottom_toTopOf="@id/vehicleName"-->
+<!--            app:layout_constraintEnd_toStartOf="@id/carImageView"-->
+<!--            app:layout_constraintHorizontal_bias="0"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_chainStyle="packed" />-->
+
+
+        <TextView
+            android:id="@+id/vehicleType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/m_20dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/av_regular_400"
+            android:maxLines="1"
+            android:background="@drawable/tag_background"
+            android:backgroundTint="@color/primaryColor"
+            android:gravity="center"
+            android:text="@{fleets.type_name}"
+            android:paddingHorizontal="6dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@id/vehicleName"
+            app:layout_constraintEnd_toStartOf="@id/carImageView"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"  />
+
+        <TextView
+            android:id="@+id/vehicleName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/m_20dp"
+            android:drawablePadding="@dimen/m_5dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/av_regular_400"
+            android:maxLines="1"
+            android:text="@{fleets.name}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/t_16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/carImageView"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vehicleType"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

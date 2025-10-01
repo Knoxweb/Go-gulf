@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/green_button_color"
+        android:backgroundTint="@color/primaryColor"
+        android:minHeight="@dimen/m_50dp"
+        android:padding="@dimen/m_10dp">
+
+        <TextView
+            android:id="@+id/standby"
+            style="@style/textStyle16m"
+            android:layout_width="@dimen/m_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/m_15dp"
+            android:text="@string/book_now"
+            android:gravity="center"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="androidx.appcompat.app.AppCompatActivity" />
+
+        <variable
+            name="toolbarViewModel"
+            type="com.gogulf.passenger.app.ui.base.CommonViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_gradient">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/layout_toolbar"
+                app:clicked="@{()-> toolbarViewModel.onValidated()}"
+                app:done="@{@string/done}"
+                app:onBackPressed="@{()-> activity.finish()}"
+                app:title="@{@string/support}" />
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/m_20dp"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/topicChooser"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/m_5dp"
+                            android:layout_marginTop="@dimen/m_20dp"
+                            android:background="@drawable/edit_text_background_main"
+                            android:minHeight="@dimen/m_50dp"
+                            android:paddingHorizontal="@dimen/m_20dp">
+
+                            <TextView
+                                android:id="@+id/topicHintTV"
+                                style="@style/textStyle16"
+                                android:layout_width="@dimen/m_0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/m_10dp"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical"
+                                android:maxLines="1"
+                                android:text="@string/choose_topic"
+                                android:textColor="@color/black"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@id/chooseSupportType"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <AutoCompleteTextView
+                                android:id="@+id/chooseSupportType"
+                                style="@style/textStyle16"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/transparent"
+                                android:drawablePadding="@dimen/m_6dp"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical|end"
+                                android:maxLines="1"
+                                android:minWidth="@dimen/m_150dp"
+                                android:textColor="@color/black"
+                                app:drawableEndCompat="@drawable/ic_up_down_arrow"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@id/topicHintTV"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="LabelFor"
+                                tools:text="Lost and Found" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:id="@+id/noteTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/m_10dp"
+                            android:layout_marginTop="@dimen/m_20dp"
+                            android:fontFamily="@font/av_regular_400"
+                            android:text="@string/please_select_the_topic_to_give_feedback_if_you_have_any_queries"
+                            android:textColor="@color/hintColor"
+                            android:textSize="@dimen/t_16sp" />
+
+
+                        <com.gogulf.passenger.app.utils.customcomponents.EditTextComponent
+                            android:id="@+id/bookingIdET"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/m_5dp"
+                            android:layout_marginTop="@dimen/m_25dp"
+                            android:visibility="visible"
+                            app:hint="Booking ID" />
+
+                        <com.gogulf.passenger.app.utils.customcomponents.EditTextComponent
+                            android:id="@+id/subjectID"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/m_5dp"
+                            android:layout_marginTop="@dimen/m_25dp"
+                            android:visibility="gone"
+                            app:hint="Subject" />
+
+                        <com.gogulf.passenger.app.utils.customcomponents.EditTextComponent
+                            android:id="@+id/messageID"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/m_5dp"
+                            android:layout_marginTop="@dimen/m_25dp"
+                            app:hint="Message" />
+
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</layout>

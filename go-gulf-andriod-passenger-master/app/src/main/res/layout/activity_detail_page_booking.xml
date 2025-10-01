@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.text.TextUtils" />
+
+        <import type="android.view.View" />
+        <variable
+            name="activity"
+            type="androidx.appcompat.app.AppCompatActivity" />
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="bookingModel"
+            type="com.gogulf.passenger.app.data.model.CurrentBookingResponseData" />
+
+        <variable
+            name="toolbarViewModel"
+            type="com.gogulf.passenger.app.ui.base.CommonViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_gradient">
+
+
+    <LinearLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_toolbar"
+            app:clicked="@{()-> toolbarViewModel.onValidated()}"
+            app:done="@{@string/empty}"
+            app:onBackPressed="@{()-> activity.finish()}"
+            app:title="@{@string/detail}" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/m_15dp"
+                android:layout_marginTop="@dimen/m_5dp"
+                android:layout_marginBottom="@dimen/m_5dp"
+                android:orientation="vertical"
+                android:paddingVertical="@dimen/m_5dp">
+
+                <include
+                    android:id="@+id/driverInformationLayout"
+                    layout="@layout/layout_header_driver_information_items"
+                    android:visibility="gone"
+                    app:drName="@{bookingModel.driver.name}" />
+
+                <View
+                    android:id="@+id/driverDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/m_10dp"
+                    android:background="@color/dividerColor" />
+
+
+                <include
+                    android:id="@+id/vehicleInformationLayout"
+                    layout="@layout/layout_vehicle_information_items"
+                    app:fleets="@{bookingModel.fleet}" />
+
+                <View
+                    android:id="@+id/vehicleDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m_1dp"
+                    android:layout_marginHorizontal="@dimen/m_5dp"
+                    android:layout_marginTop="@dimen/m_5dp"
+                    android:background="@color/dividerColor" />
+
+                <include
+                    android:id="@+id/distanceInformationLayout"
+                    layout="@layout/layout_distance_travel_information_item"
+                    app:distance="@{bookingModel.distance}"
+                    app:duration="@{bookingModel.duration}" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m_1dp"
+                    android:layout_marginHorizontal="@dimen/m_5dp"
+                    android:layout_marginTop="@dimen/m_5dp"
+                    android:background="@color/dividerColor" />
+
+                <include
+                    android:id="@+id/bookingInformationLayout"
+                    layout="@layout/layout_booking_header_items"
+                    app:bookingID="@{bookingModel.reference}"
+                    app:bottomData="@{bookingModel.pickup_date_time}"
+                    app:topData="@{bookingModel.type}" />
+
+                <include
+                    android:id="@+id/containerLayoutTrans"
+                    layout="@layout/layout_trip_card_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/m_3dp"
+                    android:layout_marginTop="@dimen/m_15dp"
+                    android:visibility="gone"
+                    app:bottomData="@{bookingModel.pickup_date_time}"
+                    app:topData="@{bookingModel.reference}" />
+
+                <include
+                    android:id="@+id/containerLayoutDistance"
+                    layout="@layout/layout_trip_card_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/m_3dp"
+                    android:layout_marginTop="@dimen/m_15dp"
+                    app:bottomData="@{bookingModel.drop.name}"
+                    app:topData="@{bookingModel.pickup.name}" />
+
+
+                <include
+                    android:id="@+id/containerLeadPassenger"
+                    layout="@layout/layout_trip_card_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/m_3dp"
+                    android:layout_marginTop="@dimen/m_15dp"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/containerDriverNote"
+                    layout="@layout/layout_driver_note"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/m_3dp"
+                    android:layout_marginTop="@dimen/m_15dp"
+                    app:driverNote="@{bookingModel.description}" />
+
+                <include
+                    android:id="@+id/containerLayoutFlight"
+                    layout="@layout/layout_flight_information_detail_design"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/m_3dp"
+                    android:layout_marginTop="@dimen/m_15dp"
+                    android:visibility="@{TextUtils.isEmpty(bookingModel.flight_number) ? View.GONE : View.VISIBLE}"
+                    app:flightNumber="@{bookingModel.flight_number}" />
+
+                <include
+                    android:id="@+id/capacityContainerLayout"
+                    layout="@layout/layout_capacity_information_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/m_3dp"
+                    android:layout_marginTop="@dimen/m_10dp"
+                    app:luggages="@{Long.toString(bookingModel.pet_count)}"
+                    app:passengers="@{Long.toString(bookingModel.passenger_count)}"
+                    app:wheel="@{Long.toString(bookingModel.wheelchair_count)}" />
+
+                <include
+                    android:id="@+id/extraCapacityLayout"
+                    layout="@layout/layout_extra_capacitys"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/m_3dp"
+                    android:layout_marginTop="@dimen/m_10dp"
+                    android:visibility="gone"
+                     />
+
+
+                <include
+                    android:id="@+id/fareLayouts"
+                    layout="@layout/layout_base_fare_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/m_3dp"
+                    android:layout_marginTop="@dimen/m_10dp"
+                    app:fare="@{bookingModel.offer_fare}" />
+
+
+                <include
+                    android:id="@+id/cardInformationLayout"
+                    layout="@layout/layout_card_information_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/m_3dp"
+                    android:layout_marginTop="@dimen/m_10dp"
+                    app:cards="@{bookingModel.card_masked}" />
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+    </RelativeLayout>
+
+</layout>

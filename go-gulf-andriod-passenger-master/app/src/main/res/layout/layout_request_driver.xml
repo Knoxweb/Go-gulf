@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="modeJR"
+            type="com.gogulf.passenger.app.data.model.response.currentride.Quote" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/chooseVehicle"
+            android:layout_width="@dimen/m_70dp"
+            android:layout_height="@dimen/m_30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/amheer_logo"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/driverStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/av_medium_500"
+            android:gravity="center"
+            android:paddingVertical="@dimen/m_5dp"
+            android:text="@string/requesting_driver"
+            android:textColor="@color/primaryColor"
+            android:textSize="@dimen/t_18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/titleDivider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m_1dp"
+            android:layout_marginTop="@dimen/m_5dp"
+            android:background="@color/dividerColor" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/driverInformation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m_5dp"
+            android:paddingHorizontal="@dimen/m_20dp">
+
+
+            <TextView
+                android:id="@+id/startTripName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/m_5dp"
+                android:fontFamily="@font/av_light_300"
+                android:text="@{modeJR.fromLocation}"
+                android:textColor="@color/subTitleColor"
+                android:textSize="@dimen/t_18sp"
+                app:drawableStartCompat="@drawable/ic_start_destination_circle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/endTripName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/m_5dp"
+                android:drawablePadding="@dimen/m_5dp"
+                android:fontFamily="@font/av_light_300"
+                android:text="@{modeJR.toLocation}"
+                android:textColor="@color/subTitleColor"
+                android:textSize="@dimen/t_18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/startTripName"
+                app:drawableStartCompat="@drawable/ic_end_destination_circle" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/driverDivider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m_1dp"
+            android:layout_marginTop="@dimen/m_5dp"
+            android:layout_marginEnd="@dimen/m_15dp"
+            android:background="@color/dividerColor" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/distanceInformation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/m_20dp"
+            android:layout_marginVertical="@dimen/m_5dp">
+
+            <TextView
+                android:id="@+id/distanceLabel"
+                android:layout_width="@dimen/m_0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/av_medium_500"
+                android:maxLines="1"
+                android:text="@string/distance"
+                android:textColor="@color/subTitleColor"
+                android:textSize="@dimen/t_16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/distanceValue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/distanceValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/m_5dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/av_medium_500"
+                android:maxLines="1"
+                android:text="@{modeJR.distance}"
+                android:textColor="@color/primaryColor"
+                android:textSize="@dimen/t_16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/durationLabel"
+                app:layout_constraintStart_toEndOf="@id/distanceLabel"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/durationLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/m_5dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/av_medium_500"
+                android:gravity="end"
+                android:maxLines="1"
+                android:text="@string/duration"
+                android:textColor="@color/subTitleColor"
+                android:textSize="@dimen/t_16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/durationValue"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintStart_toEndOf="@id/distanceValue"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/durationValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/av_medium_500"
+                android:maxLines="1"
+                android:text="@{modeJR.duration}"
+                android:textColor="@color/primaryColor"
+                android:textSize="@dimen/t_16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/cancelButton"
+            style="@style/btnStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/m_15dp"
+            android:layout_marginBottom="@dimen/m_20dp"
+            android:background="@drawable/ic_cancel_background_btn"
+            android:gravity="center"
+
+            android:minWidth="@dimen/m_150dp"
+            android:minHeight="@dimen/m_50dp"
+            android:text="@string/_cancel"
+            android:textColor="@color/black" />
+
+
+    </LinearLayout>
+</layout>

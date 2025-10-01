@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/extraDataLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/m_5dp">
+
+        <LinearLayout
+            android:id="@+id/seatLayout"
+            android:layout_width="@dimen/m_0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/seatValue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/seatPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/av_light_300"
+                android:maxLines="1"
+                android:paddingVertical="@dimen/m_5dp"
+                android:textColor="@color/subTitleColor"
+                android:textSize="@dimen/t_16sp"
+                tools:text="Infact Seat $25" />
+
+            <TextView
+                android:id="@+id/seatInfoText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/av_light_300"
+                android:maxLines="1"
+                android:textColor="@color/subTitleColor"
+                android:textSize="@dimen/t_12sp"
+                tools:text="(approx 0 to 12 months)" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/seatValue"
+            style="@style/textStyle16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/m_20dp"
+            android:ellipsize="end"
+            android:gravity="end|center_vertical"
+            android:maxLines="1"
+            android:paddingVertical="@dimen/m_5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/counterBackground"
+            app:layout_constraintStart_toEndOf="@id/seatLayout"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/counterBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/m_5dp"
+            android:background="@drawable/ic_card_counter_background"
+            android:padding="@dimen/m_10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/decreaseButton"
+                android:layout_width="@dimen/m_24dp"
+                android:layout_height="@dimen/m_24dp"
+                android:src="@drawable/ic_decrease_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dividerView" />
+
+            <View
+                android:id="@+id/dividerView"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/m_1dp"
+                android:layout_marginVertical="@dimen/m_10dp"
+                android:background="@color/dividerColor"
+                app:layout_constraintBottom_toTopOf="@id/decreaseButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/increaseButton" />
+
+            <ImageView
+                android:id="@+id/increaseButton"
+                android:layout_width="@dimen/m_24dp"
+                android:layout_height="@dimen/m_24dp"
+                android:src="@drawable/ic_increase_button"
+                app:layout_constraintBottom_toTopOf="@id/dividerView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

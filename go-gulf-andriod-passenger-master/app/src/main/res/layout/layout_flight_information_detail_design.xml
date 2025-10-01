@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="flightNumber"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/trip_card_background"
+        android:paddingHorizontal="@dimen/m_15dp"
+        android:paddingVertical="@dimen/m_10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/flightContainerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/idLabel"
+                android:layout_width="@dimen/m_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/m_5dp"
+                android:fontFamily="@font/av_regular_400"
+                android:gravity="center_vertical"
+                android:paddingVertical="@dimen/m_5dp"
+                android:text="@string/flight_info"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_16sp"
+                app:layout_constraintEnd_toStartOf="@id/flightNumberText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/flightNumberText"
+                style="@style/textStyle16"
+                android:layout_width="@dimen/m_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/m_5dp"
+                android:layout_marginStart="@dimen/m_5dp"
+                android:layout_marginEnd="@dimen/m_10dp"
+                android:background="@color/transparent"
+                android:gravity="center_vertical|end"
+                android:text="@{flightNumber}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/verifyTexts"
+                app:layout_constraintStart_toEndOf="@id/idLabel"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TextFields" />
+
+            <TextView
+                android:id="@+id/verifyTexts"
+                style="@style/textStyle16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/m_5dp"
+                android:text="@string/verify"
+                android:visibility="gone"
+                android:textColor="#25C94E"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/flightNumberText"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/flightContainerDetailLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m_10dp"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/m_5dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/flightContainerLayout">
+
+            <include
+                android:id="@+id/layoutFlightDetailContainer"
+                layout="@layout/layout_flights_information" />
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

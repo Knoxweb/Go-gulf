@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="notification"
+            type="com.gogulf.passenger.app.data.model.response.notification.NoticeModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/m_10dp"
+        android:layout_marginTop="@dimen/m_10dp"
+        android:layout_marginBottom="@dimen/m_5dp"
+        android:background="@drawable/background_notifiacation_outlined"
+        android:padding="@dimen/m_5dp">
+
+        <ImageView
+            android:id="@+id/notificationDot"
+            android:layout_width="@dimen/m_8dp"
+            android:layout_height="@dimen/m_8dp"
+            android:layout_gravity="end"
+            android:src="@drawable/notification_dot"
+            android:visibility='visible'
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/notificationHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/m_10dp"
+            android:layout_marginTop="@dimen/m_11dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/dateView"
+                style="@style/textStyle14"
+                android:layout_width="@dimen/m_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/m_10dp"
+                android:fontFamily="@font/av_medium_500"
+                android:text="@{notification.title}"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/priceView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/priceView"
+                style="@style/textStyle10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/m_10dp"
+                android:fontFamily="@font/av_medium_500"
+                android:gravity="end"
+                android:text="@{notification.notificationAt}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/message"
+            style="@style/textStyle12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/m_10dp"
+            android:layout_marginTop="@dimen/m_5dp"
+            android:layout_marginBottom="5dp"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.2"
+            android:maxLines="2"
+            android:text="@{notification.message}"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/notificationHeading" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

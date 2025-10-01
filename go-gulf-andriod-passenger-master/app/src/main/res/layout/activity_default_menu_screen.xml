@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="noData"
+            type="String" />
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="toolbarViewModel"
+            type="com.gogulf.passenger.app.ui.base.CommonViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gsBackground"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_toolbar"
+            app:clicked="@{()-> toolbarViewModel.onValidated()}"
+            app:done="@{@string/empty}"
+            app:onBackPressed="@{()-> toolbarViewModel.onBackPress()}"
+            app:title="@{title}" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/m_20dp"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/menuContainer"
+                layout="@layout/layout_menu_card_component"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m_0dp"
+                android:layout_marginVertical="@dimen/m_20dp"
+                app:layout_constraintBottom_toTopOf="@id/appIcon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <include
+                android:id="@+id/noDataLayout"
+                layout="@layout/layout_no_list_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/m_20dp"
+                android:visibility="gone"
+                app:hint="@{noData}"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/appIcon"
+                android:layout_width="@dimen/m_100dp"
+                android:layout_height="@dimen/m_50dp"
+                android:layout_marginBottom="@dimen/m_20dp"
+                android:visibility="gone"
+                android:src="@drawable/amheer_logo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,84 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Amheer" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/gsBackground</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/primaryColor</item>
+        <item name="colorSecondaryVariant">@color/gsBackground</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="bottomSheetDialogTheme">@style/ModalBottomSheetDialog</item>
+
+        <!-- Status bar color. -->
+<!--        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>-->
+        <item name="android:timePickerStyle">@style/MyTimePickerStyle</item>
+
+        <item name="android:windowAnimationStyle">
+            @style/WindowAnimations
+        </item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowLightStatusBar">false</item>
+
+
+    </style>
+
+    <style name="WindowAnimations">
+        <item name="android:activityOpenEnterAnimation">
+            @anim/right_to_left
+        </item>
+        <item name="android:activityOpenExitAnimation">
+            @anim/left_to_right
+        </item>
+        <item name="android:activityCloseEnterAnimation">
+            @anim/left_to_right
+        </item>
+        <item name="android:activityCloseExitAnimation">
+            @anim/fade_in
+        </item>
+    </style>
+
+    <style name="ModalBottomSheet" parent="Widget.Material3.BottomSheet.Modal">
+        <item name="enableEdgeToEdge">true</item>
+        <!--        <item name="android:nestedScrollingEnabled">true</item>-->
+        <!--        <item name="nestedScrollable">true</item>-->
+        <!--        <item name="dragDirection">dragDown</item>-->
+        <!--        <item name="behavior_peekHeight">auto</item>-->
+        <item name="backgroundTint">@color/editTextBackground</item>
+        <item name="paddingBottomSystemWindowInsets">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowSoftInputMode">adjustResize|stateVisible</item>
+    </style>
+
+    <style name="ModalBottomSheetDialog" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/ModalBottomSheet</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowSoftInputMode">adjustResize|stateVisible</item><!--        <item name="nestedScrollable">true</item>-->
+
+    </style>
+
+<!--    <style name="CustomDialogTheme" parent="android:Theme.Dialog">-->
+<!--        <item name="android:backgroundDimAmount">0.7</item>-->
+<!--    </style>-->
+
+
+    <style name="CustomDialogTheme" parent="ThemeOverlay.Material3.MaterialAlertDialog.Centered">
+        <item name="android:backgroundDimAmount">0.7</item>
+        <item name="android:windowBackground">@drawable/background_gradient</item>
+<!--        <item name="android:hardwareAccelerated">true</item>-->
+<!--        <item name="android:windowMinWidthMajor">70%</item>-->
+<!--        <item name="android:windowMinWidthMinor">70%</item>-->
+
+
+    </style>
+  <!-- Base application theme. -->
+    <style name="Base.Theme.Amheer" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+</resources>

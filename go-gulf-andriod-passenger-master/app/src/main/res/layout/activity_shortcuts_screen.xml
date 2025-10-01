@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="activity"
+            type="androidx.appcompat.app.AppCompatActivity" />
+
+        <variable
+            name="address"
+            type="String" />
+
+        <variable
+            name="viewModel"
+            type="com.gogulf.passenger.app.ui.shortcuts.AddShortcutsViewModel" />
+
+        <variable
+            name="toolbarViewModel"
+            type="com.gogulf.passenger.app.ui.base.CommonViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_gradient">
+
+
+        <LinearLayout
+            android:id="@+id/mainContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/layout_toolbar"
+                app:clicked="@{()-> toolbarViewModel.onValidated()}"
+                app:done="@{@string/add}"
+                app:onBackPressed="@{()-> activity.finish()}"
+                app:title="@{@string/shortcuts}" />
+
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/m_20dp"
+                android:overScrollMode="always"
+                android:fillViewport="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/m_10dp">
+
+                    <include
+                        android:id="@+id/addAddress"
+                        layout="@layout/layout_card_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/m_2dp"
+                        app:hint="@{address}"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.gogulf.passenger.app.utils.customcomponents.EditTextComponent
+                        android:id="@+id/addAddressTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/m_15dp"
+                        android:visibility="gone"
+                        app:hint="Title"
+                        app:layout_constraintTop_toBottomOf="@id/addAddress" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/shortcutRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m_0dp"
+                        android:layout_marginTop="@dimen/m_25dp"
+                        android:layout_marginBottom="@dimen/m_25dp"
+                        android:nestedScrollingEnabled="false"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:layout_constraintBottom_toTopOf="@id/appIcon"
+                        app:layout_constraintTop_toBottomOf="@id/addAddressTitle"
+                        app:spanCount="6"
+                        tools:listitem="@layout/layout_shortcut_items_dashboard" />
+
+
+                    <ImageView
+                        android:id="@+id/appIcon"
+                        android:layout_width="@dimen/m_99dp"
+                        android:layout_height="@dimen/m_47dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/m_25dp"
+                        android:fontFamily="@font/av_black_700"
+                        android:src="@drawable/amheer_logo"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/shortcutRecyclerView" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

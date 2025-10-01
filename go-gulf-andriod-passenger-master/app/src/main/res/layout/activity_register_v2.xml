@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="androidx.appcompat.app.AppCompatActivity" />
+
+        <variable
+            name="viewModel"
+            type="com.gogulf.passenger.app.ui.auth.registerv2.RegisterNewViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            tools:context="com.gogulf.passenger.app.ui.auth.registerv2.RegisterActivityV2">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/layout_toolbar"
+                app:clicked="@{()-> viewModel.hitFirstUpdate()}"
+                app:done="@{@string/done}"
+                app:onBackPressed="@{()-> viewModel.hitLogout()}"
+                app:title="@{@string/register}" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:overScrollMode="always"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/btnUploadPhoto"
+                        style="?attr/materialCardViewFilledStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/text_field_corner_radius"
+                        app:cardBackgroundColor="@color/text_field_bg"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingVertical="12dp"
+                            android:paddingHorizontal="12dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/userPhoto"
+                                android:layout_width="@dimen/m_100dp"
+                                android:layout_height="@dimen/m_100dp"
+                                android:padding="12dp"
+                                android:src="@drawable/default_no_image"
+                                app:civ_circle_background_color="@color/primary_new"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:fontFamily="@font/av_medium_500"
+                                android:text="@string/upload_photo"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/t_20sp"
+                                app:layout_constraintBottom_toTopOf="@+id/textView"
+                                app:layout_constraintStart_toEndOf="@id/userPhoto"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_chainStyle="packed" />
+
+                            <TextView
+                                android:id="@+id/textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/av_regular_400"
+                                android:text="@string/upload_pic"
+                                android:textColor="@color/hintColor"
+                                android:textSize="@dimen/t_14sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@id/userPhoto"
+                                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.gogulf.passenger.app.utils.customcomponents.CustomEditText
+                        android:id="@+id/etFullName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/btnUploadPhoto"
+                        android:layout_marginTop="16dp"
+                        app:mainRohanText="@={viewModel.fullName}"
+                        app:hintLabel="Full Name"/>
+
+                    <com.gogulf.passenger.app.utils.customcomponents.CustomEditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/etFullName"
+                        android:layout_marginTop="16dp"
+                        app:inputType="2"
+                        app:mainRohanText="@={viewModel.email}"
+                        app:hintLabel="Email"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--Top destination arrivals-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/m_5dp">
+
+            <TextView
+                android:id="@+id/startDestinationText"
+                android:layout_width="@dimen/m_0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/av_black_700"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/travelImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="SIN" />
+
+            <ImageView
+                android:id="@+id/travelImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/m_10dp"
+                android:src="@drawable/flights_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/endDestinationText"
+                app:layout_constraintStart_toEndOf="@id/startDestinationText"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/endDestinationText"
+                android:layout_width="@dimen/m_0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/av_black_700"
+                android:gravity="center_vertical|end"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/travelImage"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="LHR" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include
+            android:id="@+id/departureContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m_5dp"
+            layout="@layout/layout_flights_information_sub" />
+
+        <View
+            android:id="@+id/viewSeparator"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m_1dp"
+            android:layout_marginVertical="@dimen/m_6dp"
+            android:background="@color/dividerColor" />
+
+        <include
+            android:id="@+id/returnContainer"
+            layout="@layout/layout_flights_information_sub" />
+
+    </LinearLayout>
+
+</layout>

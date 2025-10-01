@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="androidx.appcompat.app.AppCompatActivity" />
+
+        <variable
+            name="destination"
+            type="String" />
+
+        <variable
+            name="toolbarViewModel"
+            type="com.gogulf.passenger.app.ui.base.CommonViewModel" />
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_gradient">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/layout_toolbar"
+                app:clicked="@{()-> toolbarViewModel.onValidated()}"
+                app:done="@{@string/empty}"
+                app:onBackPressed="@{()-> activity.finish()}"
+                app:title="@{@string/plan_trip}" />
+
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/m_5dp"
+                android:fillViewport="true"
+                android:overScrollMode="always"
+                android:scrollbars="none"
+                app:layout_constraintBottom_toTopOf="@id/nextButton"
+                app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/m_15dp"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/m_10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <include
+                        android:id="@+id/bookNowContainer"
+                        layout="@layout/layout_plan_trip_now"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <include
+                        android:id="@+id/bookingScheduleContainer"
+                        layout="@layout/layout_booking_calenderview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/m_20dp" />
+
+<!--                    TODO: Passenger Count Implementation param: passenger_count-->
+                    <include
+                        android:id="@+id/passengerCountContainer"
+                        layout="@layout/layout_passenger_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/m_20dp"/>
+
+
+
+                    <include
+                        android:id="@+id/returnContainer"
+                        layout="@layout/layout_return_calender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/m_20dp"
+                        android:visibility="gone" />
+
+                    <include
+                        android:id="@+id/offerContainer"
+                        layout="@layout/layout_choose_offer_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/m_20dp"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+
+            </ScrollView>
+
+
+            <LinearLayout
+                android:id="@+id/bottomButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/m_20dp"
+                android:layout_marginBottom="@dimen/m_20dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/labelName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/m_5dp"
+                        android:fontFamily="@font/av_medium_500"
+                        android:gravity="center_vertical"
+                        android:text="Average Daily rate"
+                        android:textColor="@color/hintColor"
+                        android:textSize="@dimen/t_16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/valueName"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/valueName"
+                        android:layout_width="@dimen/m_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/m_5dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/av_medium_500"
+                        android:gravity="center_vertical|end"
+                        android:maxLines="1"
+                        android:text="US$67.60"
+                        android:textColor="@color/hintColor"
+                        android:textSize="@dimen/t_14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/labelName"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/nextButton"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_gravity="center_horizontal"-->
+                <!--                    android:layout_marginTop="@dimen/m_8dp"-->
+                <!--                    android:layout_marginBottom="@dimen/m_25dp"-->
+                <!--                    android:background="@drawable/ic_background_get_started"-->
+                <!--                    android:fontFamily="@font/av_black_700"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:minWidth="@dimen/m_200dp"-->
+                <!--                    android:minHeight="@dimen/m_40dp"-->
+                <!--                    android:paddingVertical="@dimen/m_5dp"-->
+                <!--                    android:text="@string/book_now"-->
+                <!--                    android:visibility="gone"-->
+                <!--                    android:textColor="@color/textColor"-->
+                <!--                    android:textSize="@dimen/t_20sp"-->
+                <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                    app:layout_constraintHorizontal_bias="0.497"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent" />-->
+
+            </LinearLayout>
+
+            <com.gogulf.passenger.app.utils.customcomponents.PrimaryButton
+                android:id="@+id/nextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginBottom="@dimen/bottom_padding_of_view"
+                app:buttonLabel="Continue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+
+</layout>

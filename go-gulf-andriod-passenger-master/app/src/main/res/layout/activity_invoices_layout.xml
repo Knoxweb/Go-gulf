@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="noData"
+            type="String" />
+
+        <variable
+            name="toolbarViewModel"
+            type="com.gogulf.passenger.app.ui.base.CommonViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/mainContainer"
+        android:background="@color/gsBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_toolbar"
+            app:clicked="@{()-> toolbarViewModel.onValidated()}"
+            app:done="@{@string/empty}"
+            app:onBackPressed="@{()-> toolbarViewModel.onBackPress()}"
+            app:title="@{@string/invoices}" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/m_10dp">
+
+            <LinearLayout
+                android:id="@+id/topLayoutContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/m_15dp"
+                android:orientation="vertical"
+                android:paddingVertical="@dimen/m_10dp"
+                app:layout_constraintTop_toBottomOf="@id/toolbar"
+                app:layout_constraintVertical_bias="0">
+
+
+                <include
+                    android:id="@+id/topInvoiceLayout"
+                    layout="@layout/layout_invoice_header_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            <!--    <include
+                    android:id="@+id/dateFilterLayout"
+                    layout="@layout/layout_invoice_tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/m_20dp"/>-->
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/m_20dp"
+                    app:tabTextColor="@color/black"
+                    app:tabIndicatorColor="@color/btnGS"
+                    app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+                    android:background="@color/tabBG"
+                    app:tabBackground="@color/tabBG"
+                    android:layout_height="wrap_content" />
+
+                <include
+                    android:id="@+id/headerDateLayout"
+                    layout="@layout/layout_invoice_headers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/m_20dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/invoiceRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/m_10dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="2"
+                    tools:listitem="@layout/layout_from_to_amount_items" />
+
+                <include
+                    android:id="@+id/noDataLayout"
+                    layout="@layout/layout_no_list_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/m_20dp"
+                    android:layout_marginTop="@dimen/m_20dp"
+                    android:visibility="gone"
+                    app:hint="@{noData}" />
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+</layout>

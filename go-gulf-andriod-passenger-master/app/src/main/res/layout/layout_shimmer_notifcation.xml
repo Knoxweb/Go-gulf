@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/m_20dp"
+        android:layout_marginTop="@dimen/m_10dp"
+        android:layout_marginBottom="@dimen/m_5dp"
+        app:shimmer_direction="left_to_right"
+        app:shimmer_duration="1000"
+        app:shimmer_repeat_count="100"
+        app:shimmer_tilt="0.4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:orientation="vertical"
+            android:padding="@dimen/m_5dp">
+
+
+            <View
+                android:id="@+id/priceView"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/m_10dp"
+                android:background="@color/dividerColor" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m_10dp"
+                android:layout_marginTop="@dimen/m_9dp"
+                android:background="@color/dividerColor" />
+
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</layout>

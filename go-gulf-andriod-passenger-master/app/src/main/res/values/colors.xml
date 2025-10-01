@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="dividerColor">#1A1A1919</color>
+
+    <color name="btnGS">#80CA63</color>
+  >
+<!--    <color name="btnGS">#58E466</color>-->
+    <color name="gsBackground">#0D101D</color>
+    <color name="textColor">#09162B</color>
+    <color name="gsStartColor">#E61A3252</color>
+    <color name="selectionColor">#1C314F</color>
+    <color name="timeColorNew">#D4414D5D</color>
+    <color name="nowBackground">#40FFFFFF</color>
+    <color name="defaulRippleColor">#50c878</color>
+    <color name="dashboardBGCircle">#4a6080</color>
+
+<!--    Gradient Colors-->
+
+    <color name="gradientOneA">#0D101D</color>
+    <color name="gradientTwoB">#09162B</color>
+    <color name="gradientC">#FFFFFF</color>
+    <color name="gradientD">#B6F0C2</color>
+
+<!--    mAP COLOR-->
+
+    <color name="map2">#4DCC86</color>
+    <color name="map1">#80D6A7</color>
+    <color name="mapG1">#4DCC86</color>
+    <color name="mapg2">#80D6A7</color>
+
+    <!--Linear gradient colors-->
+
+    <color name="wtStart">#0D1929</color>
+    <color name="wtMid">#D90D1929</color>
+    <color name="wtEnd">#000D1929</color>
+    <color name="alertBackground">#253B5A</color>
+<!--    <color name="editTextBackground">#9C132241</color>-->
+    <color name="editTextBackground">#2C6620</color>
+<!--    <color name="hintColor">#A4A9B4</color>-->
+    <color name="hintColor">#732F2D2D</color>
+    <color name="textHintColor">#73FFFFFF</color>
+    <color name="textColor45">#73FFFFFF</color>
+
+    <color name="svgColor">#4DCC86</color>
+
+    <!--    Primary colors -->
+    <!--    <color name="primaryColor">#E5A866</color>-->
+    <color name="primaryColor">#000000</color>
+    <color name="titleColor">#434343</color>
+    <color name="backgroundColor">#FCFCFC</color>
+    <color name="subTitleColor">#ffffff</color>
+    <color name="profileBackgroundColor">#D6D6D6</color>
+    <color name="gradientOne">#3475BD</color>
+    <color name="gradientTwo">#478897</color>
+
+    <!--    Carousel Color codes-->
+
+    <color name="inactiveColor">#D9D9D9</color>
+    <color name="activeColor">#A4A4A4</color>
+    <color name="logoutColor">#B81A1A</color>
+    <color name="timeColor">#4DC3C3C3</color>
+    <color name="vehicleBackground">#FFCF9A</color>
+    <color name="vehicleBackgroundV2">#E8CC94</color>
+    <color name="unEditColor">#818181</color>
+    <color name="inActiveVehicle">#F0C79A</color>
+    <color name="excludeColor">#FF6868</color>
+    <color name="trip_background">#F4F4F4</color>
+    <color name="counter_background">#31969EA9</color>
+    <color name="trip_border">#DDDDDD</color>
+    <color name="skip_color">#A3A3A3</color>
+    <color name="includeColor">#25C94E</color>
+    <color name="excludeColor2">#E91D1E</color>
+    <color name="includeColorDim">#8025C94E</color>
+    <color name="excludeColorDim">#80E91D1E</color>
+    <color name="tabBackground">#47969EA9</color>
+    <color name="cancelColor">#EB5546</color>
+    <color name="text_inc">#888888</color>
+    <color name="amenities_background">#E9E9E9</color>
+    <color name="pendingTabColor">#EB9D71</color>
+    <color name="confirmedTabColor">#25C94E</color>
+    <color name="cancelTabColor">#FF6868</color>
+    <color name="invoice_subTitle">#969EA9</color>
+    <color name="shimmer_background_head">#818993</color>
+    <color name="shimmer_background_body">#C4C7CC</color>
+    <color name="shimmer_background_bottom">#9A9C9F</color>
+    <color name="shimmer_background">#434343</color>
+    <color name="prefferedColor">#25C94E</color>
+    <color name="excludedColor">#F16A6A</color>
+    <color name="blueDestination">#1B3FAC</color>
+    <color name="redDestination">#B81515</color>
+    <color name="blue">#4E76F0</color>
+
+    <color name="tabBG">#2E3847</color>
+    <color name="tabSelected">#515670</color>
+    <color name="logOutColor">#E60808</color>
+
+
+    <color name="background_top_new">#558319</color>
+    <color name="background_bottom_new">#80CA63</color>
+    <color name="text_field_new">#FFFFFF</color>
+<!--    <color name="text_field_new_transparency">#F5F5F5</color>-->
+    <color name="text_field_new_transparency">#0DFFFFFF</color>
+
+
+    <color name="alert_background_new">#253B5A</color>
+    <color name="divider_color_new">#1DFFFFFF</color>
+    <color name="sub_text_color_new">#C1C1C1</color>
+    <color name="selectionColorNewTransparency">#EB2D4F80</color>
+
+  <color name="primary_new">#80CA63</color>
+  <color name="text_field_bg">#cccccc</color>
+  <color name="container">#D9D9D9</color>
+
+
+</resources>

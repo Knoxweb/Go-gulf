@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/chooseVehicle"
+                android:layout_width="@dimen/m_70dp"
+                android:layout_height="@dimen/m_30dp"
+                android:src="@drawable/amheer_logo"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <include
+                android:id="@+id/silderIcon"
+                layout="@layout/layout_vechile_shift_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/m_10dp"
+                android:layout_marginEnd="@dimen/m_25dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/sliderText"
+                style="@style/textStyle16"
+                android:gravity="center"
+                android:layout_width="@dimen/m_0dp"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/m_5dp"
+                android:text="@string/slide_to_choose"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/slideView"
+                android:layout_width="@dimen/m_0dp"
+                android:layout_height="@dimen/m_1dp"
+                android:layout_marginHorizontal="@dimen/m_15dp"
+                android:layout_marginTop="@dimen/m_5dp"
+                android:background="@color/dividerColor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sliderText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <include
+            android:id="@+id/carouselContainer"
+            layout="@layout/layout_vechile_carousel_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/m_10dp"
+            android:layout_marginBottom="@dimen/m_10dp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </LinearLayout>
+</layout>

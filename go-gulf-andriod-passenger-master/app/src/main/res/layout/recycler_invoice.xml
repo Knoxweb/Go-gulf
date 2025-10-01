@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="invoice"
+            type="com.gogulf.passenger.app.data.model.InvoiceResponseData" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvReference"
+            style="@style/textStyle12"
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:background="@drawable/tag_background"
+            android:gravity="center"
+            android:backgroundTint="@color/dividerColor"
+            android:paddingHorizontal="6dp"
+            app:idType="@{invoice.reference}"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            style="@style/textStyle12"
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:layout_marginStart="6dp"
+            android:background="@drawable/tag_background"
+            android:gravity="center"
+            android:paddingHorizontal="6dp"
+            android:textColor="@color/black"
+            android:text="@{invoice.status_title}"
+            app:layout_constraintStart_toEndOf="@id/tvReference"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/generatedAtText"
+            style="@style/textStyle16m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp"
+            android:text="@{invoice.generated_at}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvReference" />
+
+        <TextView
+            style="@style/textStyle12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp"
+            android:textColor="@color/primaryColor"
+            android:text="@{@string/displayPrice(invoice.amount)}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/generatedAtText" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDownload"
+            style="?attr/materialIconButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/icon_download_icon"
+            app:iconTint="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="@null"
+            app:strokeColor="@color/dividerColor" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

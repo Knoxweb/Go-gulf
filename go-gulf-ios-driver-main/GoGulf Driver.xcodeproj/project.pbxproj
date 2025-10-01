@@ -1,0 +1,760 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		041F07692D62060E006972DD /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 041F07682D62060E006972DD /* GoogleMaps */; };
+		041F076C2D620630006972DD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 041F076B2D620630006972DD /* Kingfisher */; };
+		041F076F2D62069D006972DD /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 041F076E2D62069D006972DD /* FirebaseAnalytics */; };
+		041F07712D62069D006972DD /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 041F07702D62069D006972DD /* FirebaseAppCheck */; };
+		041F07732D62069D006972DD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 041F07722D62069D006972DD /* FirebaseAuth */; };
+		041F07752D62069D006972DD /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 041F07742D62069D006972DD /* FirebaseCrashlytics */; };
+		041F07772D62069D006972DD /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 041F07762D62069D006972DD /* FirebaseDatabase */; };
+		041F07792D62069D006972DD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 041F07782D62069D006972DD /* FirebaseFirestore */; };
+		041F077B2D62069D006972DD /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = 041F077A2D62069D006972DD /* FirebaseInstallations */; };
+		041F077D2D62069D006972DD /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 041F077C2D62069D006972DD /* FirebaseMessaging */; };
+		041F077F2D62069D006972DD /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 041F077E2D62069D006972DD /* FirebaseRemoteConfig */; };
+		041F07822D6206BB006972DD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 041F07812D6206BB006972DD /* Alamofire */; };
+		041F07852D6208F6006972DD /* GooglePlaces in Frameworks */ = {isa = PBXBuildFile; productRef = 041F07842D6208F6006972DD /* GooglePlaces */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		041F05632D62032F006972DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 041F054A2D62032D006972DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 041F05512D62032D006972DD;
+			remoteInfo = "GoGulf Driver";
+		};
+		041F056D2D62032F006972DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 041F054A2D62032D006972DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 041F05512D62032D006972DD;
+			remoteInfo = "GoGulf Driver";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		041F05522D62032D006972DD /* GoGulf Driver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GoGulf Driver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		041F05622D62032F006972DD /* GoGulf DriverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GoGulf DriverTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		041F056C2D62032F006972DD /* GoGulf DriverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GoGulf DriverUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		041A3BCF2D7450A2008329CE /* Exceptions for "GoGulf Driver" folder in "GoGulf Driver" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 041F05512D62032D006972DD /* GoGulf Driver */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		041F05542D62032D006972DD /* GoGulf Driver */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				041A3BCF2D7450A2008329CE /* Exceptions for "GoGulf Driver" folder in "GoGulf Driver" target */,
+			);
+			path = "GoGulf Driver";
+			sourceTree = "<group>";
+		};
+		041F05652D62032F006972DD /* GoGulf DriverTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "GoGulf DriverTests";
+			sourceTree = "<group>";
+		};
+		041F056F2D62032F006972DD /* GoGulf DriverUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "GoGulf DriverUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		041F054F2D62032D006972DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				041F077F2D62069D006972DD /* FirebaseRemoteConfig in Frameworks */,
+				041F07712D62069D006972DD /* FirebaseAppCheck in Frameworks */,
+				041F07732D62069D006972DD /* FirebaseAuth in Frameworks */,
+				041F077D2D62069D006972DD /* FirebaseMessaging in Frameworks */,
+				041F076C2D620630006972DD /* Kingfisher in Frameworks */,
+				041F077B2D62069D006972DD /* FirebaseInstallations in Frameworks */,
+				041F07752D62069D006972DD /* FirebaseCrashlytics in Frameworks */,
+				041F07692D62060E006972DD /* GoogleMaps in Frameworks */,
+				041F07792D62069D006972DD /* FirebaseFirestore in Frameworks */,
+				041F07852D6208F6006972DD /* GooglePlaces in Frameworks */,
+				041F07822D6206BB006972DD /* Alamofire in Frameworks */,
+				041F07772D62069D006972DD /* FirebaseDatabase in Frameworks */,
+				041F076F2D62069D006972DD /* FirebaseAnalytics in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		041F055F2D62032F006972DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		041F05692D62032F006972DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		041F05492D62032D006972DD = {
+			isa = PBXGroup;
+			children = (
+				041F05542D62032D006972DD /* GoGulf Driver */,
+				041F05652D62032F006972DD /* GoGulf DriverTests */,
+				041F056F2D62032F006972DD /* GoGulf DriverUITests */,
+				041F05532D62032D006972DD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		041F05532D62032D006972DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				041F05522D62032D006972DD /* GoGulf Driver.app */,
+				041F05622D62032F006972DD /* GoGulf DriverTests.xctest */,
+				041F056C2D62032F006972DD /* GoGulf DriverUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		041F05512D62032D006972DD /* GoGulf Driver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 041F05762D62032F006972DD /* Build configuration list for PBXNativeTarget "GoGulf Driver" */;
+			buildPhases = (
+				041F054E2D62032D006972DD /* Sources */,
+				041F054F2D62032D006972DD /* Frameworks */,
+				041F05502D62032D006972DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				041F05542D62032D006972DD /* GoGulf Driver */,
+			);
+			name = "GoGulf Driver";
+			packageProductDependencies = (
+				041F07682D62060E006972DD /* GoogleMaps */,
+				041F076B2D620630006972DD /* Kingfisher */,
+				041F076E2D62069D006972DD /* FirebaseAnalytics */,
+				041F07702D62069D006972DD /* FirebaseAppCheck */,
+				041F07722D62069D006972DD /* FirebaseAuth */,
+				041F07742D62069D006972DD /* FirebaseCrashlytics */,
+				041F07762D62069D006972DD /* FirebaseDatabase */,
+				041F07782D62069D006972DD /* FirebaseFirestore */,
+				041F077A2D62069D006972DD /* FirebaseInstallations */,
+				041F077C2D62069D006972DD /* FirebaseMessaging */,
+				041F077E2D62069D006972DD /* FirebaseRemoteConfig */,
+				041F07812D6206BB006972DD /* Alamofire */,
+				041F07842D6208F6006972DD /* GooglePlaces */,
+			);
+			productName = "GoGulf Driver";
+			productReference = 041F05522D62032D006972DD /* GoGulf Driver.app */;
+			productType = "com.apple.product-type.application";
+		};
+		041F05612D62032F006972DD /* GoGulf DriverTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 041F05792D62032F006972DD /* Build configuration list for PBXNativeTarget "GoGulf DriverTests" */;
+			buildPhases = (
+				041F055E2D62032F006972DD /* Sources */,
+				041F055F2D62032F006972DD /* Frameworks */,
+				041F05602D62032F006972DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				041F05642D62032F006972DD /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				041F05652D62032F006972DD /* GoGulf DriverTests */,
+			);
+			name = "GoGulf DriverTests";
+			packageProductDependencies = (
+			);
+			productName = "GoGulf DriverTests";
+			productReference = 041F05622D62032F006972DD /* GoGulf DriverTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		041F056B2D62032F006972DD /* GoGulf DriverUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 041F057C2D62032F006972DD /* Build configuration list for PBXNativeTarget "GoGulf DriverUITests" */;
+			buildPhases = (
+				041F05682D62032F006972DD /* Sources */,
+				041F05692D62032F006972DD /* Frameworks */,
+				041F056A2D62032F006972DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				041F056E2D62032F006972DD /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				041F056F2D62032F006972DD /* GoGulf DriverUITests */,
+			);
+			name = "GoGulf DriverUITests";
+			packageProductDependencies = (
+			);
+			productName = "GoGulf DriverUITests";
+			productReference = 041F056C2D62032F006972DD /* GoGulf DriverUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		041F054A2D62032D006972DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					041F05512D62032D006972DD = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					041F05612D62032F006972DD = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 041F05512D62032D006972DD;
+					};
+					041F056B2D62032F006972DD = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 041F05512D62032D006972DD;
+					};
+				};
+			};
+			buildConfigurationList = 041F054D2D62032D006972DD /* Build configuration list for PBXProject "GoGulf Driver" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 041F05492D62032D006972DD;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				041F07672D62060E006972DD /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
+				041F076A2D620630006972DD /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				041F076D2D62069D006972DD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				041F07802D6206BB006972DD /* XCRemoteSwiftPackageReference "Alamofire" */,
+				041F07832D6208F6006972DD /* XCRemoteSwiftPackageReference "ios-places-sdk" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 041F05532D62032D006972DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				041F05512D62032D006972DD /* GoGulf Driver */,
+				041F05612D62032F006972DD /* GoGulf DriverTests */,
+				041F056B2D62032F006972DD /* GoGulf DriverUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		041F05502D62032D006972DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		041F05602D62032F006972DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		041F056A2D62032F006972DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		041F054E2D62032D006972DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		041F055E2D62032F006972DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		041F05682D62032F006972DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		041F05642D62032F006972DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 041F05512D62032D006972DD /* GoGulf Driver */;
+			targetProxy = 041F05632D62032F006972DD /* PBXContainerItemProxy */;
+		};
+		041F056E2D62032F006972DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 041F05512D62032D006972DD /* GoGulf Driver */;
+			targetProxy = 041F056D2D62032F006972DD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		041F05742D62032F006972DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		041F05752D62032F006972DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		041F05772D62032F006972DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "GoGulf Driver/GoGulf Driver.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1000052;
+				DEVELOPMENT_ASSET_PATHS = "\"GoGulf Driver/Preview Content\"";
+				DEVELOPMENT_TEAM = JG8SW82P28;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "GoGulf-Driver-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "To upload the profile photo";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "To share your location to the passenger";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To share your location to the passenger";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "To upload your profile photo";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.052;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gogulf.driver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		041F05782D62032F006972DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "GoGulf Driver/GoGulf Driver.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1000052;
+				DEVELOPMENT_ASSET_PATHS = "\"GoGulf Driver/Preview Content\"";
+				DEVELOPMENT_TEAM = JG8SW82P28;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "GoGulf-Driver-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "To upload the profile photo";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "To share your location to the passenger";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To share your location to the passenger";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "To upload your profile photo";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.052;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gogulf.driver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		041F057A2D62032F006972DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6HY69CR885;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com..GoGulf-DriverTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoGulf Driver.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GoGulf Driver";
+			};
+			name = Debug;
+		};
+		041F057B2D62032F006972DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6HY69CR885;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com..GoGulf-DriverTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoGulf Driver.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GoGulf Driver";
+			};
+			name = Release;
+		};
+		041F057D2D62032F006972DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6HY69CR885;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com..GoGulf-DriverUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "GoGulf Driver";
+			};
+			name = Debug;
+		};
+		041F057E2D62032F006972DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6HY69CR885;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com..GoGulf-DriverUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "GoGulf Driver";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		041F054D2D62032D006972DD /* Build configuration list for PBXProject "GoGulf Driver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				041F05742D62032F006972DD /* Debug */,
+				041F05752D62032F006972DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		041F05762D62032F006972DD /* Build configuration list for PBXNativeTarget "GoGulf Driver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				041F05772D62032F006972DD /* Debug */,
+				041F05782D62032F006972DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		041F05792D62032F006972DD /* Build configuration list for PBXNativeTarget "GoGulf DriverTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				041F057A2D62032F006972DD /* Debug */,
+				041F057B2D62032F006972DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		041F057C2D62032F006972DD /* Build configuration list for PBXNativeTarget "GoGulf DriverUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				041F057D2D62032F006972DD /* Debug */,
+				041F057E2D62032F006972DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		041F07672D62060E006972DD /* XCRemoteSwiftPackageReference "ios-maps-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googlemaps/ios-maps-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.3.0;
+			};
+		};
+		041F076A2D620630006972DD /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.2.0;
+			};
+		};
+		041F076D2D62069D006972DD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.8.1;
+			};
+		};
+		041F07802D6206BB006972DD /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+		041F07832D6208F6006972DD /* XCRemoteSwiftPackageReference "ios-places-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googlemaps/ios-places-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		041F07682D62060E006972DD /* GoogleMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041F07672D62060E006972DD /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
+			productName = GoogleMaps;
+		};
+		041F076B2D620630006972DD /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041F076A2D620630006972DD /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		041F076E2D62069D006972DD /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041F076D2D62069D006972DD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		041F07702D62069D006972DD /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041F076D2D62069D006972DD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		041F07722D62069D006972DD /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041F076D2D62069D006972DD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		041F07742D62069D006972DD /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041F076D2D62069D006972DD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		041F07762D62069D006972DD /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041F076D2D62069D006972DD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		041F07782D62069D006972DD /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041F076D2D62069D006972DD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		041F077A2D62069D006972DD /* FirebaseInstallations */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041F076D2D62069D006972DD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseInstallations;
+		};
+		041F077C2D62069D006972DD /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041F076D2D62069D006972DD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		041F077E2D62069D006972DD /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041F076D2D62069D006972DD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		041F07812D6206BB006972DD /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041F07802D6206BB006972DD /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		041F07842D6208F6006972DD /* GooglePlaces */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041F07832D6208F6006972DD /* XCRemoteSwiftPackageReference "ios-places-sdk" */;
+			productName = GooglePlaces;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 041F054A2D62032D006972DD /* Project object */;
+}

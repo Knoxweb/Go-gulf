@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="booking"
+            type="String" />
+
+        <variable
+            name="time"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gsBackground"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m_1dp"
+            android:layout_marginTop="@dimen/m_5dp"
+            android:background="@color/dividerColor" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m_5dp">
+
+            <LinearLayout
+                android:id="@+id/leftContainer"
+                android:layout_width="@dimen/m_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/m_5dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/rightContainer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/bookValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/av_heavy_800"
+                    android:paddingHorizontal="@dimen/m_5dp"
+                    android:text="@{booking}"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_22sp" />
+
+                <TextView
+                    android:id="@+id/bookLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/av_light_300"
+                    android:paddingHorizontal="@dimen/m_5dp"
+                    android:layout_gravity="center"
+                    android:text="@string/total_booking"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_16sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/rightContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/m_5dp"
+                android:gravity="end"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/leftContainer"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/timeValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/av_heavy_800"
+                    android:gravity="end"
+                    android:layout_gravity="center"
+                    android:paddingHorizontal="@dimen/m_5dp"
+                    android:text="@{time}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_22sp" />
+
+                <TextView
+                    android:id="@+id/nextBooking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/av_light_300"
+                    android:gravity="end"
+                    android:paddingHorizontal="@dimen/m_5dp"
+                    android:layout_gravity="center"
+                    android:text="@string/next_booking"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_16sp" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m_1dp"
+            android:layout_marginVertical="@dimen/m_5dp"
+            android:background="@color/dividerColor" />
+    </LinearLayout>
+
+
+</layout>

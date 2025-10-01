@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.gogulf.passenger.app.data.model.response.currentride.CurrentRideApiModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/m_20dp"
+        android:paddingEnd="@dimen/m_0dp"
+        android:paddingBottom="@dimen/m_40dp">
+
+        <ImageView
+            android:id="@+id/chooseVehicle"
+            android:layout_width="@dimen/m_70dp"
+            android:layout_height="@dimen/m_30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/amheer_logo"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/driverStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/m_15dp"
+            android:fontFamily="@font/av_medium_500"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/m_5dp"
+            android:paddingVertical="@dimen/m_5dp"
+            android:textColor="@color/primaryColor"
+            android:textSize="@dimen/t_18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/titleDivider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m_1dp"
+            android:layout_marginTop="@dimen/m_5dp"
+            android:layout_marginEnd="@dimen/m_15dp"
+            android:background="@color/dividerColor" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/driverInformation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m_5dp"
+            android:layout_marginEnd="@dimen/m_15dp"
+            android:paddingHorizontal="@dimen/m_20dp"
+            android:visibility="gone">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/driverImageView"
+                android:layout_width="@dimen/m_70dp"
+                android:layout_height="@dimen/m_70dp"
+                android:layout_marginVertical="@dimen/m_5dp"
+                android:src="@drawable/ic_driver_cureent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/driverName"
+                android:layout_width="@dimen/m_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/m_20dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/av_heavy_800"
+                android:gravity="start|center"
+                android:lines="1"
+                android:text="@{data.driver.name}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_18sp"
+                app:layout_constraintBottom_toTopOf="@id/callButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/driverImageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/callButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/m_20dp"
+                android:layout_marginTop="@dimen/m_5dp"
+                android:background="@drawable/ic_call"
+                android:contentDescription="@string/call_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/driverImageView"
+                app:layout_constraintTop_toBottomOf="@id/driverName" />
+
+            <ImageButton
+                android:id="@+id/messageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/m_35dp"
+                android:layout_marginTop="@dimen/m_5dp"
+                android:background="@drawable/ic_message"
+                android:contentDescription="@string/message_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/callButton"
+                app:layout_constraintTop_toBottomOf="@id/driverName" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/driverDivider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m_1dp"
+            android:layout_marginTop="@dimen/m_5dp"
+            android:layout_marginEnd="@dimen/m_15dp"
+            android:background="@color/dividerColor"
+            android:visibility="gone" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/vehicleInformation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/m_5dp"
+            android:paddingVertical="@dimen/m_5dp">
+
+            <ImageView
+                android:id="@+id/carImageView"
+                android:layout_width="@dimen/m_120dp"
+                android:layout_height="@dimen/m_90dp"
+                android:contentDescription="@string/vehicle_images"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="@dimen/m_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/m_8dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/carImageView"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/vehicleTypeInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/av_light_300"
+                    android:text="@{data.booking.fleet.vehicle_make +` | `+ data.booking.fleet.vehicle_model}"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="@dimen/t_15sp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/vehicleName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/m_5dp"
+                    android:fontFamily="@font/av_light_300"
+                    android:text="@{data.booking.fleet.class_name + ` | ` + data.booking.fleet.type_name}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_14sp" />
+
+                <TextView
+                    android:id="@+id/vehicleType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/av_light_300"
+                    android:text="@{data.booking.fleet.vehicle_color+` | Rego: `+data.booking.fleet.vehicle_registration_number.toUpperCase()}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_14sp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:id="@+id/bottomLayoutLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <View
+                android:id="@+id/vehicleDividerTops"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m_1dp"
+                android:layout_marginEnd="@dimen/m_15dp"
+                android:background="@color/dividerColor" />
+
+            <include
+                android:id="@+id/capacityInformaion"
+                layout="@layout/layout_capacity_current_ride"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginVertical="@dimen/m_5dp"
+                app:lug="@{Long.toString(data.booking.pet)}"
+                app:pax="@{Long.toString(data.booking.passenger)}"
+                app:wheel="@{Long.toString(data.booking.wheel_chair)}" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottomLayoutLinear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/vehicleDivider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m_1dp"
+                android:layout_marginEnd="@dimen/m_15dp"
+                android:background="@color/dividerColor" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/distanceInformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/m_5dp"
+                android:layout_marginEnd="@dimen/m_15dp">
+
+                <TextView
+                    android:id="@+id/distanceLabel"
+                    android:layout_width="@dimen/m_0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/av_medium_500"
+                    android:maxLines="1"
+                    android:text="@string/distance"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/distanceValue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/distanceValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/m_5dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/av_medium_500"
+                    android:gravity="start|center"
+                    android:maxLines="1"
+                    android:text="@{data.booking.distance}"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="@dimen/t_14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/durationLabel"
+                    app:layout_constraintStart_toEndOf="@id/distanceLabel"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/durationLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/m_5dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/av_medium_500"
+                    android:gravity="end"
+                    android:maxLines="1"
+                    android:text="@string/duration"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/durationValue"
+                    app:layout_constraintHorizontal_bias="1"
+                    app:layout_constraintStart_toEndOf="@id/distanceValue"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/durationValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/av_medium_500"
+                    android:maxLines="1"
+                    android:text="@{data.booking.duration}"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="@dimen/t_14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottomLayoutLinear3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/vehicleDividerBottom"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m_1dp"
+                android:layout_marginEnd="@dimen/m_15dp"
+                android:background="@color/dividerColor" />
+
+            <TextView
+                android:id="@+id/priceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/m_5dp"
+                android:fontFamily="@font/av_black_700"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/m_20dp"
+                android:text="@{@string/totalFareValue(data.booking.fare)}"
+                android:textColor="@color/primaryColor"
+                android:textSize="@dimen/t_24sp" />
+
+            <TextView
+                android:id="@+id/gstText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/m_5dp"
+                android:fontFamily="@font/av_light_300"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/m_20dp"
+                android:text="@string/tva_incluse"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_12sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/cancelRide"
+            style="@style/doneButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/m_10dp"
+            android:layout_marginBottom="@dimen/m_20dp"
+            android:background="@drawable/ic_background_get_started"
+            android:text="@string/cancel_ride"
+            android:visibility="gone" />
+
+
+
+    </LinearLayout>
+</layout>

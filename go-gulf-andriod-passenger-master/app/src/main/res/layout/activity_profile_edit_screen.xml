@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="toolbarViewModel"
+            type="com.gogulf.passenger.app.ui.base.CommonViewModel" />
+
+        <variable
+            name="activity"
+            type="androidx.appcompat.app.AppCompatActivity" />
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_gradient">
+
+
+        <LinearLayout
+            android:id="@+id/mainContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/layout_toolbar"
+                app:clicked="@{()-> toolbarViewModel.onValidated()}"
+                app:done="@{@string/done}"
+                app:onBackPressed="@{()-> activity.finish()}"
+                app:title="@{@string/profile_edit}" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/m_15dp"
+                    android:layout_marginTop="@dimen/m_5dp"
+                    android:layout_marginBottom="@dimen/m_5dp"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/m_5dp">
+
+                    <com.gogulf.passenger.app.utils.customcomponents.EditTextComponent
+                        android:id="@+id/nameET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/m_10dp"
+                        app:hint="Name" />
+
+                    <com.gogulf.passenger.app.utils.customcomponents.EditTextComponent
+                        android:id="@+id/emailET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/m_25dp"
+                        app:hint="Email" />
+
+                    <com.gogulf.passenger.app.utils.customcomponents.EditTextComponent
+                        android:id="@+id/phoneET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/m_25dp"
+                        app:hint="Phone" />
+
+
+                </LinearLayout>
+
+            </ScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+
+</layout>

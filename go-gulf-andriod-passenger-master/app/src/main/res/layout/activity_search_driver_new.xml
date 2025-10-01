@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.gogulf.passenger.app.ui.search_ride.SearchDriverViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.gogulf.passenger.app.ui.search_ride.SearchDriverNewActivity">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/radar_animation_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:elevation="1dp"
+            app:layout_constraintBottom_toBottomOf="@id/map"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/map"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="loading_rpple.json"
+            app:lottie_loop="true" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/defaultIcon"
+            android:layout_width="@dimen/m_80dp"
+            android:layout_height="@dimen/m_80dp"
+            android:layout_gravity="center"
+            android:elevation="2dp"
+            android:src="@drawable/default_photos"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/map"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/map" />
+
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="-32dp"
+            android:tag="map"
+            app:layout_constraintBottom_toTopOf="@id/materialCard"
+            app:layout_constraintTop_toTopOf="parent"
+            map:cameraZoom="3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/av_black_700"
+            android:text="@{viewModel.timerState.timerToShow}"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@id/materialCard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCard"
+            style="?attr/materialCardViewFilledStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-12dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:strokeWidth="0dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutInside"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_gradient"
+                android:paddingBottom="48dp">
+
+
+                <TextView
+                    android:id="@+id/hintLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="12dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/av_black_700"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="Requesting Driver"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="@dimen/t_18sp"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/btnStartTrip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintTop_toBottomOf="@id/hintLocation">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <View
+                            android:id="@+id/titleDivider"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/m_1dp"
+                            android:layout_marginTop="@dimen/m_5dp"
+                            android:background="@color/dividerColor" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/driverInformation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/m_5dp"
+                            android:paddingHorizontal="@dimen/m_20dp">
+
+
+                            <TextView
+                                android:id="@+id/startTripName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="@dimen/m_5dp"
+                                android:fontFamily="@font/av_light_300"
+                                android:text="@{viewModel.uiState.confirmBookingSearchDriverResponseData.pickup.name}"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/t_18sp"
+                                app:drawableStartCompat="@drawable/ic_start_destination_circle"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/endTripName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/m_5dp"
+                                android:drawablePadding="@dimen/m_5dp"
+                                android:fontFamily="@font/av_light_300"
+                                android:text="@{viewModel.uiState.confirmBookingSearchDriverResponseData.drop.name}"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/t_18sp"
+                                app:drawableStartCompat="@drawable/ic_end_destination_circle"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/startTripName" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <View
+                            android:id="@+id/driverDivider"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/m_1dp"
+                            android:layout_marginTop="@dimen/m_5dp"
+                            android:layout_marginEnd="@dimen/m_15dp"
+                            android:background="@color/dividerColor" />
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/distanceInformation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/m_20dp"
+                            android:layout_marginVertical="@dimen/m_5dp">
+
+                            <TextView
+                                android:id="@+id/distanceLabel"
+                                android:layout_width="@dimen/m_0dp"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/av_medium_500"
+                                android:maxLines="1"
+                                android:text="@string/distance"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/t_16sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@id/distanceValue"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/distanceValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/m_5dp"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/av_medium_500"
+                                android:maxLines="1"
+                                android:text="@{viewModel.uiState.confirmBookingSearchDriverResponseData.distance}"
+                                android:textColor="@color/primaryColor"
+                                android:textSize="@dimen/t_16sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@id/durationLabel"
+                                app:layout_constraintStart_toEndOf="@id/distanceLabel"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <TextView
+                                android:id="@+id/durationLabel"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/m_5dp"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/av_medium_500"
+                                android:gravity="end"
+                                android:maxLines="1"
+                                android:text="@string/duration"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/t_16sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@id/durationValue"
+                                app:layout_constraintHorizontal_bias="1"
+                                app:layout_constraintStart_toEndOf="@id/distanceValue"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/durationValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/av_medium_500"
+                                android:maxLines="1"
+                                android:text="@{viewModel.uiState.confirmBookingSearchDriverResponseData.duration}"
+                                android:textColor="@color/primaryColor"
+                                android:textSize="@dimen/t_16sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <!--                        <TextView-->
+                        <!--                            android:id="@+id/cancelButton"-->
+                        <!--                            style="@style/btnStyle"-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:layout_gravity="center"-->
+                        <!--                            android:layout_marginTop="@dimen/m_15dp"-->
+                        <!--                            android:layout_marginBottom="@dimen/m_20dp"-->
+                        <!--                            android:background="@drawable/ic_cancel_background_btn"-->
+                        <!--                            android:gravity="center"-->
+                        <!--                            android:minWidth="@dimen/m_150dp"-->
+                        <!--                            android:minHeight="@dimen/m_50dp"-->
+                        <!--                            android:text="@string/_cancel"-->
+                        <!--                            android:textColor="@color/black" />-->
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/av_black_700"
+                            android:gravity="center"
+                            android:text="@{@string/displayPrice(viewModel.uiState.confirmBookingSearchDriverResponseData.offer_fare)}"
+                            android:textColor="@color/primaryColor"
+                            android:textSize="32sp" />
+
+                        <com.gogulf.passenger.app.utils.customcomponents.PrimaryButton
+                            android:id="@+id/btnCancel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="@dimen/bottom_padding_of_view"
+                            app:buttonLabel="@string/_cancel"
+                            app:labelColor="@color/black"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:primaryBackground="@color/cancelColor" />
+
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

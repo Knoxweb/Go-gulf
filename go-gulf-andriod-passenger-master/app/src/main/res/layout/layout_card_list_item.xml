@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="cardModel"
+            type="com.gogulf.passenger.app.data.model.response.mycards.CardModels" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/background_card_outlined">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/delete_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginBottom="-25dp"
+            android:elevation="5dp">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circle_background_plain"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/circle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="@dimen/m_16dp"
+                android:layout_height="@dimen/m_16dp"
+                android:src="@drawable/delete_card_material_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="@dimen/m_5dp"
+            android:layout_marginBottom="@dimen/m_15dp"
+            android:minWidth="@dimen/m_250dp"
+            android:padding="@dimen/m_20dp">
+
+
+            <LinearLayout
+                android:id="@+id/cardInformation"
+                android:layout_width="@dimen/m_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/m_20dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/cardVerification"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/cardNumberHolder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/av_regular_400"
+                    android:gravity="center|start"
+                    android:text="@{cardModel.card_masked}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_18sp" />
+
+                <!--            MONTH TEXTFIELD-->
+
+
+                <TextView
+                    android:id="@+id/expiryValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/av_regular_400"
+                    android:gravity="start|center_vertical"
+                    android:text="@{cardModel.exp_month +` / `+cardModel.exp_year}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_15sp" />
+
+
+                <!--            Make this active-->
+                <TextView
+                    android:id="@+id/makeActiveCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/m_10dp"
+                    android:background="@drawable/ic_background_card_status"
+                    android:fontFamily="@font/av_regular_400"
+                    android:gravity="end|center_vertical"
+                    android:paddingHorizontal="@dimen/m_20dp"
+                    android:paddingVertical="@dimen/m_2dp"
+                    android:text="@string/_active_card"
+                    android:textColor="@color/gsBackground"
+                    android:textSize="@dimen/t_12sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardVerification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end|bottom"
+                android:orientation="vertical"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cardInformation"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/m_5dp">
+
+                    <ImageView
+                        android:id="@+id/visImage"
+                        android:layout_width="@dimen/m_60dp"
+                        android:layout_height="@dimen/m_30dp"
+                        android:fontFamily="@font/av_regular_400"
+                        android:gravity="center|start"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/t_18sp" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/verified"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/m_15dp"
+                    android:fontFamily="@font/av_regular_400"
+                    android:gravity="start|center_vertical"
+                    android:text="@{cardModel.status}"
+                    android:textColor="@color/btnGS"
+                    android:textSize="@dimen/t_15sp" />
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="bookingModel"
+            type="com.gogulf.passenger.app.data.model.CurrentBookingResponseData" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/m_15dp"
+        android:layout_marginBottom="@dimen/m_5dp"
+        android:background="@drawable/trip_card_background"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/m_20dp"
+        android:paddingVertical="@dimen/m_10dp">
+
+        <TextView
+            android:id="@+id/pickups"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/av_black_700"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingVertical="5dp"
+            android:text="@{bookingModel.pickup_date_time}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/t_16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m_1dp"
+            android:layout_marginTop="@dimen/m_10dp"
+            android:background="@color/dividerColor" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bookingIdLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/startDestinationLabel"
+                    style="@style/textStyle16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/startDestination"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:drawableStartCompat="@drawable/ic_start_destination_circle" />
+
+                <TextView
+                    android:id="@+id/startDestination"
+                    android:layout_width="@dimen/m_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/m_10dp"
+                    android:layout_marginTop="@dimen/m_2dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/av_regular_400"
+                    android:gravity="start|center"
+                    android:maxLines="1"
+                    android:text="@{bookingModel.pickup.name}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/startDestinationLabel"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m_10dp">
+
+            <TextView
+                android:id="@+id/destinationLabel"
+                style="@style/textStyle16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/m_5dp"
+                android:ellipsize="end"
+                android:gravity="start|center"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/endDestination"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:drawableStartCompat="@drawable/ic_end_destination_circle" />
+
+            <TextView
+                android:id="@+id/endDestination"
+                style="@style/textStyle16"
+                android:layout_width="@dimen/m_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/m_10dp"
+                android:ellipsize="end"
+                android:gravity="start|center"
+                android:maxLines="1"
+                android:text="@{bookingModel.drop.name}"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/destinationLabel"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m_1dp"
+            android:layout_marginTop="@dimen/m_10dp"
+            android:background="@color/dividerColor" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/priceLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/bookingId"
+                style="@style/textStyle20"
+                android:layout_width="@dimen/m_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:gravity="end"
+                android:fontFamily="@font/av_heavy_800"
+                android:text="@{@string/displayPrice(bookingModel.fare)}"
+                android:textColor="@color/btnGS"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/gstIncluded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/m_5dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/av_medium_500"
+                android:gravity="center_vertical|end"
+                android:maxLines="1"
+                android:layout_marginTop="-8dp"
+                app:layout_constraintTop_toBottomOf="@id/bookingId"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/tva_incluse"
+                android:textColor="@color/hintColor"
+                android:textSize="@dimen/t_12sp" />
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/cancelBooking"-->
+<!--                style="@style/doneButtonStyle"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="@dimen/m_10dp"-->
+<!--                android:layout_marginTop="@dimen/m_2dp"-->
+<!--                android:minHeight="@dimen/m_45dp"-->
+<!--                android:background="@drawable/cancel_background_shape"-->
+<!--                android:fontFamily="@font/av_black_700"-->
+<!--                android:gravity="center"-->
+<!--                android:minWidth="@dimen/m_100dp"-->
+<!--                android:text="@string/cancel"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="@dimen/t_16sp"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toEndOf="@id/bookingId"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:layout_goneMarginStart="@dimen/m_10dp" />-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.gogulf.passenger.app.utils.customcomponents.PrimaryButton
+            android:id="@+id/cancelBooking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:primaryBackground="@color/cancelColor"
+            app:labelColor="@color/black"
+            android:layout_marginTop="12dp"
+            app:buttonLabel="@string/cancel"
+            app:extraInfo="* 50% of the 'Booking Fare' will be charged if the ride is cancelled within 90 minutes of pickup time." />
+
+
+    </LinearLayout>
+</layout>

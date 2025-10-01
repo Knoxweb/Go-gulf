@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/inputContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/m_2dp"
+            android:background="@drawable/edit_text_background_main"
+            android:minHeight="@dimen/m_50dp"
+            android:padding="@dimen/m_5dp"
+            app:layout_constraintBottom_toTopOf="@id/errorText"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginVertical="@dimen/m_5dp"
+                android:background="@color/transparent"
+                android:fontFamily="@font/av_regular_400"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/m_10dp"
+                android:paddingVertical="@dimen/m_2dp"
+                android:textColor="@color/hintColor"
+                android:textSize="@dimen/t_16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="Autofill"
+                tools:text="Card Expiry" />
+
+            <TextView
+                android:id="@+id/expiryField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginVertical="@dimen/m_5dp"
+                android:background="@color/transparent"
+                android:fontFamily="@font/av_regular_400"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/m_10dp"
+                android:paddingVertical="@dimen/m_2dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="Autofill"
+                tools:text="01/2022" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/errorText"
+            style="@style/textStyle12"
+            android:layout_width="@dimen/m_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m_5dp"
+            android:layout_marginBottom="@dimen/m_2dp"
+            android:gravity="end|center"
+            android:textColor="@color/red"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputContainer" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

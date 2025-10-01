@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="distance"
+            type="String" />
+
+        <variable
+            name="duration"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/distanceInformation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/m_10dp">
+
+        <TextView
+            android:id="@+id/distanceLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/av_regular_400"
+            android:maxLines="1"
+            android:text="@string/distance"
+            android:textColor="@color/black"
+            android:textSize="@dimen/t_16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/distanceValue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/distanceValue"
+            android:layout_width="@dimen/m_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/m_5dp"
+            android:layout_marginEnd="@dimen/m_10dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/av_regular_400"
+            android:maxLines="1"
+            android:text="@{distance}"
+            android:textColor="@color/primaryColor"
+            android:textSize="@dimen/t_16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/durationLabel"
+            app:layout_constraintStart_toEndOf="@id/distanceLabel"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/durationLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/m_10dp"
+            android:layout_marginEnd="@dimen/m_5dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/av_regular_400"
+            android:gravity="end"
+            android:maxLines="1"
+            android:text="@string/duration"
+            android:textColor="@color/black"
+            android:textSize="@dimen/t_16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/durationValue"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toEndOf="@id/distanceValue"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/durationValue"
+            android:layout_width="@dimen/m_0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/av_regular_400"
+            android:maxLines="1"
+            android:text="@{duration}"
+            android:textColor="@color/primaryColor"
+            android:textSize="@dimen/t_16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/durationLabel"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "434759111181",
+    "project_id": "go-gulf-coast-d2176",
+    "storage_bucket": "go-gulf-coast-d2176.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:434759111181:android:44b85f3a43f11bdbf83b44",
+        "android_client_info": {
+          "package_name": "com.gogulf.passenger.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "434759111181-1s85d4ou5lqkt9cb2huo24k6ls4h1mpc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXNM8E_54N4Y8gtlV_SlZ5c68h_l_nQv8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "434759111181-1s85d4ou5lqkt9cb2huo24k6ls4h1mpc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "434759111181-8gu0q10def0155aclgocqnvblk611duo.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.gogulf.pax"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

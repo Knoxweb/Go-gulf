@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/m_5dp"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardCornerRadius="@dimen/m_10dp"
+        app:cardElevation="@dimen/m_5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_gradient"
+            android:minWidth="275dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:padding="12dp">
+
+                <ImageView
+                    android:id="@+id/alertIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/m_10dp"
+                    android:contentDescription="@string/alert_icons"
+                    android:maxWidth="@dimen/m_50dp"
+                    android:maxHeight="@dimen/m_50dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_slyyk_s"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_max="@dimen/m_30dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_max="@dimen/m_70dp" />
+
+                <TextView
+                    android:id="@+id/alertTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/m_8dp"
+                    android:fontFamily="@font/av_heavy_800"
+                    android:gravity="center"
+                    android:text="OTP CODE"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/alertIcon" />
+
+                <TextView
+                    android:id="@+id/alertmsg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/m_12dp"
+                    android:fontFamily="@font/av_regular_400"
+                    android:gravity="center"
+                    android:text="Please provide this OTP to your driver for authentication purposes."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/alertTitle" />
+
+                <TextView
+                    android:id="@+id/alertText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/m_20dp"
+                    android:layout_marginTop="@dimen/m_10dp"
+                    android:fontFamily="@font/av_medium_500"
+                    android:gravity="center"
+                    android:letterSpacing="0.2"
+                    android:textColor="@color/black"
+                    android:textSize="40sp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/alertmsg"
+                    tools:text="0000"
+                    tools:visibility="visible" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

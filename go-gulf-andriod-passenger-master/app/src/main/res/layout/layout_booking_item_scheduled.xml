@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="bookingModel"
+            type="com.gogulf.passenger.app.data.model.CurrentBookingResponseData" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/m_15dp"
+        android:layout_marginBottom="@dimen/m_5dp"
+        android:background="@drawable/trip_card_background"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/m_20dp"
+        android:paddingVertical="@dimen/m_10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bookingIdLayoutd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/bookingIdLabel"
+                style="@style/textStyle16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="BKID"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/bookingID"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/bookingID"
+                android:layout_width="@dimen/m_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/m_10dp"
+                android:layout_marginTop="@dimen/m_2dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/av_medium_500"
+                android:gravity="end|center"
+                android:maxLines="1"
+                android:text="@{bookingModel.reference}"
+                android:textColor="@color/primaryColor"
+                android:textSize="@dimen/t_16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/bookingIdLabel"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m_1dp"
+            android:layout_marginTop="@dimen/m_10dp"
+            android:background="@color/dividerColor" />
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/m_10dp"
+            android:layout_height="wrap_content">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bookingIdLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/startDestinationLabel"
+                    style="@style/textStyle16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/startDestination"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/start"/>
+
+                <TextView
+                    android:id="@+id/startDestination"
+                    android:layout_width="@dimen/m_0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end|center"
+                    android:layout_marginTop="@dimen/m_2dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:fontFamily="@font/av_regular_400"
+                    android:layout_marginStart="@dimen/m_10dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_16sp"
+                    app:layout_constraintStart_toEndOf="@id/startDestinationLabel"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="@{bookingModel.pickup.name}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                   />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m_1dp"
+            android:layout_marginTop="@dimen/m_10dp"
+            android:background="@color/dividerColor" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m_10dp">
+
+            <TextView
+                android:id="@+id/destinationLabel"
+                style="@style/textStyle16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="start|center"
+                android:maxLines="1"
+                android:text="@string/destination"
+                android:textColor="@color/black"
+                android:layout_marginEnd="@dimen/m_5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/endDestination"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/endDestination"
+                style="@style/textStyle16"
+                android:layout_width="@dimen/m_0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="end|center"
+                android:layout_marginStart="@dimen/m_10dp"
+                android:maxLines="1"
+                android:text="@{bookingModel.drop.name}"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/destinationLabel"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m_1dp"
+            android:layout_marginTop="@dimen/m_10dp"
+            android:background="@color/dividerColor" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/priceLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m_10dp">
+
+            <TextView
+                android:id="@+id/bookingId"
+                style="@style/textStyle16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:layout_marginEnd="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/bookingPrice"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="@{bookingModel.pickup_date_time}"/>
+
+            <TextView
+                android:id="@+id/bookingPrice"
+                android:layout_width="@dimen/m_0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center|end"
+                android:layout_marginTop="@dimen/m_2dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_marginStart="@dimen/m_10dp"
+                android:textColor="@color/btnGS"
+                android:textSize="@dimen/t_16sp"
+                android:fontFamily="@font/av_medium_500"
+                app:layout_goneMarginStart="@dimen/m_10dp"
+                android:text="@{@string/displayPrice(bookingModel.fare)}"
+                app:layout_constraintStart_toEndOf="@id/bookingId"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="label"
+            type="com.gogulf.passenger.app.ui.settings.account.AccountInformationModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/m_5dp">
+
+        <TextView
+            android:id="@+id/labelTV"
+            android:layout_width="@dimen/m_0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/av_regular_400"
+            android:gravity="center_vertical|start"
+            android:paddingVertical="@dimen/m_5dp"
+            android:text="@{label.label}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/t_16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/valueTV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/valueTV"
+            android:layout_width="@dimen/m_0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/av_regular_400"
+            android:gravity="end|center_vertical"
+            android:paddingVertical="@dimen/m_5dp"
+            android:text="@{label.value}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/t_16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/labelTV"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,37 @@
+//
+//  ErrorHandler.swift
+//   GoGulf
+//
+//  Created by Mac on 6/21/22.
+//
+
+import SwiftUI
+
+struct UIAlert: View {
+    @ObservedObject var viewModel: AlertVM = AlertVM()
+    var body: some View {
+        VStack{
+        }
+        .alert(isPresented: $viewModel.showAlert) {
+            Alert(
+                title: Text("\(title)"),
+                message: Text("\(message)"),
+                dismissButton: .destructive(Text("OK")) {
+                    self.alertDismiss = true
+                }
+            )
+        }
+    }
+    
+    func showAlertMessage(alert: Bool){
+        if(alert){
+            self.showAlert = true
+        }
+    }
+}
+
+struct UIAlert_Previews: PreviewProvider {
+    static var previews: some View {
+        UIAlert(statusCode: 400, title: "Error", message: "Error Message")
+    }
+}

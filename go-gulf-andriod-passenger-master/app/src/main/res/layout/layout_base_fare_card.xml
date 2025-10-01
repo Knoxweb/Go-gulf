@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="invoice"
+            type="com.gogulf.passenger.app.data.model.response.bookings.Invoice" />
+
+
+        <variable
+            name="fare"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/trip_card_background"
+        android:paddingHorizontal="@dimen/m_15dp"
+        android:paddingVertical="@dimen/m_10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/topLayoutConstraint"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/labelTV"
+                android:layout_width="@dimen/m_0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/av_regular_400"
+                android:gravity="center_vertical|start"
+                android:paddingVertical="@dimen/m_5dp"
+                android:text="Base Fare"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/valueTV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/valueTV"
+                android:layout_width="@dimen/m_0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/av_regular_400"
+                android:gravity="end|center_vertical"
+                android:paddingVertical="@dimen/m_5dp"
+                android:textColor="@color/btnGS"
+                android:textSize="@dimen/t_16sp"
+                android:text="@{@string/totalFareValue(invoice.fare)}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/labelTV"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/headerSeparator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/m_2dp"
+            android:background="@color/dividerColor"
+            app:layout_constraintTop_toBottomOf="@id/topLayoutConstraint" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewCharge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:itemCount="5"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/headerSeparator"
+            tools:listitem="@layout/layout_text_view_fares" />
+
+        <View
+            android:id="@+id/footerSeparator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/m_2dp"
+            android:background="@color/dividerColor"
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewCharge" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottomConstraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m_5dp"
+            android:layout_marginBottom="@dimen/m_5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/footerSeparator">
+
+            <TextView
+                android:id="@+id/labelTVbtn"
+                android:layout_width="@dimen/m_0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/av_regular_400"
+                android:gravity="center_vertical|start"
+                android:paddingVertical="@dimen/m_5dp"
+                android:text="Total Fare"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/valueTVbtn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/valueTVbtn"
+                android:layout_width="@dimen/m_0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/av_regular_400"
+                android:gravity="end|center_vertical"
+                android:paddingVertical="@dimen/m_5dp"
+                android:textColor="@color/primaryColor"
+                android:textSize="@dimen/t_16sp"
+                android:text="@{@string/displayPrice(fare)}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/labelTVbtn"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="drName"
+            type="String" />
+    </data>
+
+    <!--                Driver Image and information -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/m_10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/driverImageView"
+            android:layout_width="@dimen/m_60dp"
+            android:layout_height="@dimen/m_60dp"
+            android:src="@drawable/driver_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/m_20dp"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/m_10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/driverImageView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0">
+
+            <TextView
+                android:id="@+id/driverName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/m_5dp"
+                android:fontFamily="@font/av_regular_400"
+                android:text="@{drName}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_18sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <include
+                    android:id="@+id/driverRatings"
+                    layout="@layout/layout_rating_detail_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/m_5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/addToPreferred"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/m_5dp"
+                    android:drawablePadding="@dimen/m_10dp"
+                    android:fontFamily="@font/av_regular_400"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/m_20dp"
+                    android:paddingVertical="@dimen/m_5dp"
+                    android:text="Preferred Driver"
+                    android:textColor="@color/prefferedColor"
+                    android:textSize="@dimen/t_12sp"
+                    android:visibility="gone"
+                    app:drawableStartCompat="@drawable/ic_fav"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/exclude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/m_10dp"
+                    android:drawablePadding="@dimen/m_10dp"
+                    android:paddingHorizontal="@dimen/m_20dp"
+                    android:paddingVertical="@dimen/m_5dp"
+                    android:text="Excluded Driver"
+                    android:textColor="@color/excludedColor"
+                    android:visibility="gone"
+                    app:drawableStartCompat="@drawable/ic_exclude"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/addToPreferred"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

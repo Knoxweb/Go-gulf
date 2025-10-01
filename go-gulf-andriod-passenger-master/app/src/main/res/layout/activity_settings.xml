@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="toolbarViewModel"
+            type="com.gogulf.passenger.app.ui.base.CommonViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_gradient">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_toolbar"
+            app:clicked="@{()-> toolbarViewModel.onValidated()}"
+            app:done="@{@string/empty}"
+            app:onBackPressed="@{()-> toolbarViewModel.onBackPress()}"
+            app:title="@{@string/account}" />
+
+        <include
+            android:id="@+id/menuContainer"
+            layout="@layout/layout_menu_card_component"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/m_20dp"
+            android:layout_marginVertical="@dimen/m_20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+
+
+        <LinearLayout
+            android:id="@+id/logoutContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/m_20dp"
+            android:background="@drawable/trip_card_background"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/m_20dp"
+            android:paddingVertical="@dimen/m_15dp"
+            app:layout_constraintTop_toBottomOf="@id/menuContainer">
+
+            <ImageView
+                android:layout_width="@dimen/m_25dp"
+                android:layout_height="@dimen/m_25dp"
+                android:contentDescription="@string/logout_button"
+                app:tint="@color/primaryColor"
+                android:src="@drawable/ic_logout" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/m_20dp"
+                android:fontFamily="@font/av_black_700"
+                android:text="@string/log_out"
+                android:textColor="@color/logOutColor"
+                android:textSize="@dimen/t_16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/deleteContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/m_20dp"
+            android:background="@drawable/trip_card_background"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/m_20dp"
+            android:paddingVertical="@dimen/m_15dp"
+            app:layout_constraintTop_toBottomOf="@id/logoutContainer">
+
+            <ImageView
+                android:layout_width="@dimen/m_25dp"
+                android:layout_height="@dimen/m_25dp"
+                android:contentDescription="@string/logout_button"
+                android:src="@drawable/baseline_delete_outline_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/m_20dp"
+                android:fontFamily="@font/av_black_700"
+                android:text="@string/delete_account"
+                android:textColor="@color/logOutColor"
+                android:textSize="@dimen/t_16sp" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+
+</layout>

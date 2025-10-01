@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.gogulf.passenger.app.ui.trips.TripDestinationV2ViewModel" />
+
+
+        <variable
+            name="activity"
+            type="com.gogulf.passenger.app.ui.trips.TripDestinationActivityV2" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_gradient">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            tools:context="com.gogulf.passenger.app.ui.trips.TripDestinationActivityV2">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/layout_toolbar"
+                app:clicked="@{()-> viewModel.runDone(activity)}"
+                app:done="@{@string/continue_text}"
+                app:onBackPressed="@{()-> activity.finish()}"
+                app:title="@{@string/enter_location}" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btnPickUpLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/background_top_in_list"
+                android:paddingVertical="12dp"
+                app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+                <TextView
+                    android:id="@+id/pickUpTitle"
+                    style="@style/textStyle13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="12dp"
+                    android:text="Pickup"
+                    android:textColor="@color/primaryColor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/pickUpLocation"
+                    style="@style/textStyle14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingHorizontal="12dp"
+                    android:text="@{viewModel.uiState.selectedPickupOnScreen}"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/pickUpTitle" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btnDropOffLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="@dimen/background_list_gap"
+                android:background="@drawable/background_bottom_in_list"
+                android:paddingVertical="12dp"
+                app:layout_constraintTop_toBottomOf="@id/btnPickUpLocation">
+
+                <TextView
+                    android:id="@+id/dropOffTitle"
+                    style="@style/textStyle13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="12dp"
+                    android:text="Destination"
+                    android:textColor="@color/primaryColor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    style="@style/textStyle14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingHorizontal="12dp"
+                    android:text="@{viewModel.uiState.selectedDropOffLocationOnScreen}"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/dropOffTitle" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/shortcutLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/m_20dp"
+                android:layout_marginBottom="@dimen/m_20dp"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/m_20dp"
+                android:layout_marginHorizontal="16dp"
+                app:layout_constraintTop_toBottomOf="@id/btnDropOffLocation">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/shortcutRecyclerView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="5"
+                    tools:listitem="@layout/layout_card_shortcut_search_destination" />
+
+<!--                <include-->
+<!--                    android:id="@+id/addShortcut"-->
+<!--                    layout="@layout/layout_card_shortcut_search_destination"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="@dimen/m_10dp" />-->
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+</layout>

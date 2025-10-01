@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="fleetModel"
+            type="com.gogulf.passenger.app.data.model.response.bookings.Fleet" />
+
+        <variable
+            name="quotes"
+            type="com.gogulf.passenger.app.data.model.response.bookings.QuotesResponse" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/m_0dp"
+        android:paddingEnd="@dimen/m_0dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutMainContainer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m_0dp"
+            app:layout_constraintBottom_toTopOf="@id/bottomLayoutConstraint"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vehicleGuide"
+                android:layout_width="@dimen/m_0dp"
+                android:layout_height="@dimen/m_0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/vehicleConstraint"
+                android:layout_width="@dimen/m_0dp"
+                android:layout_height="@dimen/m_0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/vehicleGuide">
+
+                <ImageView
+                    android:id="@+id/carImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitEnd"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_max="@dimen/m_350dp"
+                    app:layout_constraintHeight_min="@dimen/m_300dp"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/chooseVehiclesInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/m_15dp"
+                android:paddingEnd="@dimen/m_0dp"
+                android:visibility="visible"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/infoChooseVehicle"
+                    style="@style/label18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:visibility="gone"
+                    android:maxLines="1"
+                    android:text="@string/chooseVehicle" />
+<!--
+                <TextView
+                    android:id="@+id/distanceInformation"
+                    style="@style/normal18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@{quotes.distance + ` ` + quotes.duration}" />-->
+
+
+            </LinearLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/headerScrollview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/m_5dp"
+                android:layout_marginBottom="@dimen/m_5dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/vehicleConstraint"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/chooseVehiclesInfo"
+                app:layout_constraintVertical_bias="1">
+
+                <LinearLayout
+                    android:id="@+id/headerConstraints"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/m_20dp"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/m_15dp"
+                    android:paddingEnd="@dimen/m_0dp">
+
+                    <TextView
+                        android:id="@+id/distanceInformation"
+                        style="@style/normal18"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@{quotes.distance + ` ` + quotes.duration}" />
+                    <TextView
+                        android:id="@+id/vehicleName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/av_heavy_800"
+                        android:maxLines="1"
+                        android:paddingVertical="@dimen/m_2dp"
+                        android:text="@{fleetModel.className}"
+                        android:textColor="@color/btnGS"
+                        android:textSize="@dimen/t_18sp" />
+
+                    <TextView
+                        android:id="@+id/vehicleClassName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/av_light_300"
+                        android:maxLines="1"
+                        android:paddingVertical="@dimen/m_2dp"
+                        android:text="@{fleetModel.className}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/t_16sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/vModelName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/m_5dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/av_regular_400"
+                        android:maxLines="1"
+                        android:paddingVertical="@dimen/m_2dp"
+                        android:text="@{fleetModel.typeName}"
+                        android:textColor="@color/subTitleColor"
+                        android:textSize="@dimen/t_14sp" />
+
+                    <include
+                        android:id="@+id/passengerContainer"
+                        layout="@layout/layout_passenger_luggage_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/m_5dp"
+                        app:lug="@{fleetModel.pet}"
+                        app:pass="@{fleetModel.passenger}"
+                        app:wheel="@{fleetModel.wheelChair}" />
+
+                    <View
+                        android:layout_width="@dimen/m_80dp"
+                        android:layout_height="@dimen/m_1dp"
+                        android:layout_marginVertical="@dimen/m_15dp"
+                        android:background="@color/black"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottomLayoutConstraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/m_20dp"
+            android:layout_marginBottom="@dimen/m_20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:id="@+id/priceLinearLayout"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/m_5dp"
+                app:layout_constraintBottom_toTopOf="@id/selectButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/priceView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/av_black_700"
+                    android:maxLines="1"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/m_2dp"
+                    android:text="@{@string/totalFareValue(fleetModel.offerFare)}"
+                    android:textColor="@color/btnGS"
+                    android:textSize="@dimen/t_18sp" />
+
+                <TextView
+                    android:id="@+id/totalPrices"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/av_black_700"
+                    android:maxLines="1"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:paddingVertical="@dimen/m_2dp"
+                    android:text="@{@string/totalFareValue(fleetModel.fare)}"
+                    android:textColor="@color/cancelColor"
+                    android:textSize="@dimen/t_12sp" />
+
+                <TextView
+                    android:id="@+id/taxView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/av_light_300"
+                    android:maxLines="1"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/m_2dp"
+                    android:text="@string/tva_inclusive"
+                    android:textColor="@color/subTitleColor"
+                    android:textSize="@dimen/t_10sp" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/selectButton"
+                style="@style/btnStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_background_get_started"
+                android:gravity="center"
+                android:minWidth="@dimen/m_164dp"
+                android:minHeight="@dimen/m_40dp"
+                android:paddingHorizontal="@dimen/m_15dp"
+                android:paddingVertical="@dimen/m_5dp"
+                android:text="@string/select"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/priceLinearLayout" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

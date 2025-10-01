@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="androidx.appcompat.app.AppCompatActivity" />
+
+        <variable
+            name="loginViewModel"
+            type="com.gogulf.passenger.app.ui.auth.login.LoginViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            tools:context="com.gogulf.passenger.app.ui.auth.login.LoginActivityV2">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/layout_toolbar"
+                app:clicked="@{()-> loginViewModel.sendOtp(activity)}"
+                app:done="@{@string/done}"
+                app:onBackPressed="@{()-> activity.finish()}"
+                app:title="@{@string/enter_mobile_number}" />
+
+            <TextView
+                android:id="@+id/textLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/m_16dp"
+                android:layout_marginTop="25dp"
+                android:text="@string/enter_number_to_receive_otp_code"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/phoneNumberField"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/phone_number_background"
+                app:layout_constraintTop_toBottomOf="@id/textLabel">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/phone_number_background" />
+
+                <LinearLayout
+                    android:id="@+id/btnChooseCountry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <ImageView
+                        imageFromDrawable="@{loginViewModel.uiState.countryModel.drawable}"
+                        android:layout_width="32dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="16dp" />
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="12dp"
+                        android:src="@drawable/drop_down" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="12dp"
+                        android:gravity="center_vertical"
+                        android:text="@{loginViewModel.uiState.countryModel.dialCode}"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/enterPhoneNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="12dp"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/av_regular_400"
+                    android:hint="1234567890"
+                    android:inputType="phone"
+                    android:maxLines="1"
+                    android:text="@={loginViewModel.phoneNumber}"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/t_20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/btnChooseCountry"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/main"
+                app:layout_constraintStart_toStartOf="@+id/main"
+                app:layout_constraintTop_toBottomOf="@id/phoneNumberField">
+
+
+                <com.gogulf.passenger.app.utils.customcomponents.PrimaryButton
+                    android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginTop="24dp"
+                    app:buttonLabel="Done" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/or_element"
+                    style="?attr/materialCardViewFilledStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:layout_marginTop="24dp"
+                    android:transitionName="or_element"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardElevation="0dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:id="@+id/view1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:alpha="1"
+                            app:dividerColor="@color/sub_text_color_new"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/text_id_or"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/text_id_or"
+                            style="@style/textStyle12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:text="OR CONTINUE WITH"
+                            android:textColor="@color/sub_text_color_new"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/view2"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/view1"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:id="@+id/view2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:alpha="1"
+                            app:dividerColor="@color/sub_text_color_new"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/text_id_or"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.gogulf.passenger.app.utils.customcomponents.SecondaryButton
+                    android:id="@+id/btnEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:secondaryButtonLabel="Email"
+                    android:layout_marginTop="24dp" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+</layout>

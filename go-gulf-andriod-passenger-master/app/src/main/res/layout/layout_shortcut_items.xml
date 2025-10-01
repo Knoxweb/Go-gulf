@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/addLayoutContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/m_2dp"
+            android:paddingHorizontal="@dimen/m_20dp">
+
+            <ImageView
+                android:id="@+id/addImageIcon"
+                android:layout_width="@dimen/m_25dp"
+                android:layout_height="@dimen/m_25dp"
+                android:layout_marginBottom="@dimen/m_10dp"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/primaryColor"
+                tools:src="@drawable/ic_menu_flight" />
+
+            <TextView
+                android:id="@+id/menuNameTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/m_20dp"
+                android:layout_marginEnd="@dimen/m_20dp"
+                android:layout_marginBottom="@dimen/m_10dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/av_regular_400"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="Add"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_18sp"
+                app:layout_constraintEnd_toStartOf="@id/editIcon"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/addImageIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/menuNameLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/m_20dp"
+                android:layout_marginEnd="@dimen/m_20dp"
+                android:layout_marginBottom="@dimen/m_10dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/av_regular_400"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="Add"
+                android:layout_marginTop="@dimen/m_2dp"
+                android:textColor="@color/hintColor"
+                android:textSize="@dimen/t_14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/editIcon"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/addImageIcon"
+                app:layout_constraintTop_toBottomOf="@id/menuNameTitle"
+
+                />
+
+            <ImageView
+                android:id="@+id/editIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/m_15dp"
+                android:layout_marginBottom="@dimen/m_10dp"
+                android:src="@drawable/ic_edit_png"
+                app:tint="@color/primaryColor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/deleteIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/deleteIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/m_10dp"
+                android:src="@drawable/ic_delete_png"
+                app:tint="@color/primaryColor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:layout_marginHorizontal="@dimen/m_20dp"
+            android:background="@color/dividerColor" />
+
+    </LinearLayout>
+
+</layout>

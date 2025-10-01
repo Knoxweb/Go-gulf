@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="topData"
+            type="String" />
+
+        <variable
+            name="bottomData"
+            type="String" />
+
+        <variable
+            name="bookingID"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/m_3dp"
+        android:layout_marginTop="@dimen/m_15dp"
+        android:background="@drawable/trip_card_background"
+        android:paddingHorizontal="@dimen/m_15dp"
+        android:paddingVertical="@dimen/m_10dp">
+
+        <TextView
+            android:id="@+id/bookingIdLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/av_regular_400"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingVertical="@dimen/m_5dp"
+            android:text="@string/booking_id"
+            android:textColor="@color/black"
+            android:textSize="@dimen/t_16sp"
+            app:layout_constraintBottom_toTopOf="@id/bookingSeparator"
+            app:layout_constraintEnd_toStartOf="@id/bookingIdValue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/bookingIdValue"
+            android:layout_width="@dimen/m_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/m_5dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/av_regular_400"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:paddingVertical="@dimen/m_5dp"
+            android:text="@{bookingID}"
+            android:textColor="@color/primaryColor"
+            android:textSize="@dimen/t_16sp"
+            app:layout_constraintBottom_toTopOf="@id/bookingSeparator"
+            app:layout_constraintEnd_toStartOf="@id/scheduleLabel"
+            app:layout_constraintStart_toEndOf="@id/bookingIdLabel"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/scheduleLabel"
+            android:layout_width="@dimen/m_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/m_5dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/av_regular_400"
+            android:gravity="end|center_vertical"
+            android:maxLines="1"
+            android:paddingVertical="@dimen/m_5dp"
+            android:text="@{topData}"
+            android:textColor="@color/primaryColor"
+            android:textSize="@dimen/t_16sp"
+            app:layout_constraintBottom_toBottomOf="@id/bookingSeparator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/bookingIdValue"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/bookingSeparator"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m_1dp"
+            android:layout_marginHorizontal="@dimen/m_5dp"
+            android:background="@color/dividerColor"
+            app:layout_constraintBottom_toTopOf="@id/dateTimeValue"
+            app:layout_constraintTop_toBottomOf="@id/bookingIdLabel" />
+
+        <TextView
+            android:id="@+id/dateTimeLabel"
+            android:layout_width="@dimen/m_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m_5dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/av_regular_400"
+            android:maxLines="1"
+            android:paddingVertical="@dimen/m_5dp"
+            android:text="@string/pickup_date_time"
+            android:textColor="@color/black"
+            android:textSize="@dimen/t_16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/dateTimeValue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bookingSeparator" />
+
+        <TextView
+            android:id="@+id/dateTimeValue"
+            android:layout_width="@dimen/m_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m_5dp"
+            android:fontFamily="@font/av_regular_400"
+            android:gravity="end|center_vertical"
+            android:paddingVertical="@dimen/m_5dp"
+            android:text="@{bottomData}"
+            android:textColor="@color/primaryColor"
+            android:textSize="@dimen/t_16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/dateTimeLabel"
+            app:layout_constraintTop_toBottomOf="@id/bookingSeparator" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

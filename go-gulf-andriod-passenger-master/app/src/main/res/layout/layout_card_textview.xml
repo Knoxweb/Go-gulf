@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="hint"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/background_middle_in_list"
+        android:backgroundTint="@color/primary_new"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/hintView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/m_15dp"
+            android:layout_marginBottom="@dimen/m_5dp"
+            android:background="@color/transparent"
+            android:fontFamily="@font/av_heavy_800"
+            android:text="@string/address"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/t_14sp"
+            android:maxLines="1"
+            android:ellipsize="end" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_background_main"
+        android:minHeight="@dimen/m_50dp">
+
+        <TextView
+            android:id="@+id/hintTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="@dimen/m_5dp"
+            android:background="@color/transparent"
+            android:fontFamily="@font/av_regular_400"
+            android:paddingHorizontal="@dimen/m_16dp"
+            android:paddingVertical="@dimen/m_5dp"
+            android:text="@{hint}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/t_16sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+</layout>

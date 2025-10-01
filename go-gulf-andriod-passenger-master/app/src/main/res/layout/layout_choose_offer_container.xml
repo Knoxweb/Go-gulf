@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/trip_card_background"
+        android:minHeight="@dimen/m_50dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/m_20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/returnBookingCalender"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="@dimen/m_10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/returnBookText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/m_10dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/av_heavy_800"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="@string/choose_your_offer"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/autoCompleteText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/m_50dp"
+                android:background="@color/transparent"
+                android:fontFamily="@font/av_regular_400"
+                android:textColor="@color/black"
+                android:drawablePadding="@dimen/m_5dp"
+                android:textSize="@dimen/t_16sp"
+                android:dropDownWidth="@dimen/m_150dp"
+                android:text="@string/_0"
+                android:drawableEnd="@drawable/ic_up_down_arrow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</layout>

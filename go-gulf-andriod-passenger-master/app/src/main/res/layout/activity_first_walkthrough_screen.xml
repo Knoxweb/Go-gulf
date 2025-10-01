@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="topic"
+            type="String" />
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="desc"
+            type="String" />
+
+
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true">
+
+            <include
+                android:id="@+id/walkThroughImage"
+                layout="@layout/layout_walkthrough_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:desc="@{desc}"
+                app:layout_constraintBottom_toTopOf="@id/bottomContainer"
+                app:layout_constraintTop_toTopOf="parent"
+                app:title="@{title}" />
+
+
+            <include
+                android:id="@+id/bottomContainer"
+                layout="@layout/layout_walkthrough_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="48dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:topic="@{topic}" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+</layout>

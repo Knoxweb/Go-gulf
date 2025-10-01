@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="desc"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/m_20dp">
+
+        <ImageView
+            android:id="@+id/walkthroughIV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="300dp"/>
+
+        <TextView
+            android:id="@+id/titleTV"
+            style="@style/textStyle18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m_40dp"
+            android:fontFamily="@font/av_medium_500"
+            android:gravity="center"
+            android:text="@{title}"
+            tools:text="Upload the data"
+            android:textColor="@color/background_bottom_new"/>
+
+        <TextView
+            android:id="@+id/descTV"
+            style="@style/textStyle14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m_10dp"
+            android:gravity="center"
+            android:text="@{desc}"
+            tools:text="@string/lorems"
+            android:textColor="@color/background_bottom_new"/>
+    </LinearLayout>
+</layout>

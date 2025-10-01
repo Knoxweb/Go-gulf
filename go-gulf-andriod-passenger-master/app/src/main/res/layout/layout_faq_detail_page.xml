@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/m_5dp"
+        android:layout_marginBottom="@dimen/m_10dp"
+        android:background="@drawable/trip_card_background"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/m_20dp"
+        android:paddingVertical="@dimen/m_10dp">
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/av_heavy_800"
+            android:gravity="center_vertical"
+            android:paddingVertical="@dimen/m_5dp"
+            android:text="@string/what_is_amheer"
+            android:textColor="@color/black"
+            android:textSize="@dimen/t_20sp" />
+
+        <TextView
+            android:id="@+id/textSubTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/av_regular_400"
+            android:text="@string/lorems"
+            android:textColor="@color/black"
+            android:textSize="@dimen/t_16sp" />
+    </LinearLayout>
+
+
+</layout>

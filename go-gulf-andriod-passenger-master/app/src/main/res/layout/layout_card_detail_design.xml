@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="cardModel"
+            type="com.gogulf.passenger.app.data.model.response.mycards.CardModels" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardAppLogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_card"
+        app:cardCornerRadius="@dimen/m_12dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/m_10dp"
+            android:minWidth="@dimen/m_250dp"
+            android:padding="@dimen/m_10dp">
+
+            <TextView
+                android:id="@+id/cardNumberHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/m_10dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/av_heavy_800"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@{cardModel.card_masked}"
+                android:textColor="@color/btnGS"
+                android:textSize="@dimen/t_20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <!--            CVC/TEXTFIELD-->
+
+            <LinearLayout
+                android:id="@+id/cvcLayout"
+                android:layout_width="@dimen/m_0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@id/expiryLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardNumberHolder">
+
+                <TextView
+                    android:id="@+id/labelCvc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/m_10dp"
+                    android:fontFamily="@font/av_heavy_800"
+                    android:text="@string/cvv_cvv2"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_10sp" />
+
+                <TextView
+                    android:id="@+id/cvcValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/av_medium_500"
+                    android:maxLength="4"
+                    android:maxLines="1"
+                    android:text="@{cardModel.cardVerificationNumber}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="@id/labelCvc"
+                    app:layout_constraintTop_toBottomOf="@id/labelCvc" />
+
+
+            </LinearLayout>
+
+            <!--            MONTH TEXTFIELD-->
+
+            <LinearLayout
+                android:id="@+id/expiryLayout"
+                android:layout_width="@dimen/m_0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cvcLayout"
+                app:layout_constraintTop_toBottomOf="@id/cardNumberHolder">
+
+                <TextView
+                    android:id="@+id/labelMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/m_10dp"
+                    android:fontFamily="@font/av_heavy_800"
+                    android:text="@string/expiry_date"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_10sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardNumberHolder" />
+
+                <TextView
+                    android:id="@+id/expiryValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/av_medium_500"
+                    android:maxLength="8"
+                    android:maxLines="1"
+                    android:text="@{cardModel.exp_month+` / `+cardModel.exp_year}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/labelMonth" />
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

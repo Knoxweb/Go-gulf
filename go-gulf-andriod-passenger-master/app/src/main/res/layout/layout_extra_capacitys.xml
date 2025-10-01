@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="infant"
+            type="String" />
+
+        <variable
+            name="child"
+            type="String" />
+
+        <variable
+            name="booster"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/m_3dp"
+        android:layout_marginTop="@dimen/m_10dp"
+        android:background="@drawable/trip_card_background"
+        android:padding="@dimen/m_15dp">
+
+        <TextView
+            android:id="@+id/selectedCapacity"
+            android:layout_width="@dimen/m_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/m_20dp"
+            android:fontFamily="@font/av_regular_400"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="@dimen/m_5dp"
+            android:text="@string/extra_capacity"
+            android:textColor="@color/subTitleColor"
+            android:textSize="@dimen/t_16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/carInformationConstraint"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/carInformationConstraint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toEndOf="@id/selectedCapacity"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ic_infant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/pax_number_image"
+                        app:tint="@color/black"
+                        android:src="@drawable/ic_infant_seat" />
+
+                    <TextView
+                        android:id="@+id/infantValue"
+                        style="@style/textStyle14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/m_10dp"
+                        android:text="@{infant}" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ic_child"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/m_25dp"
+                        android:contentDescription="@string/pax_number_image"
+                        app:tint="@color/black"
+                        android:src="@drawable/ic_childs_seat" />
+
+                    <TextView
+                        android:id="@+id/childValue"
+                        style="@style/textStyle14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/m_10dp"
+                        android:text="@{child}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ic_booster"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/m_25dp"
+                        android:contentDescription="@string/pax_number_image"
+                        android:src="@drawable/ic_booster_seat"
+                        app:tint="@color/black" />
+
+                    <TextView
+                        android:id="@+id/boosterValue"
+                        style="@style/textStyle14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/m_10dp"
+                        android:text="@{booster}" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

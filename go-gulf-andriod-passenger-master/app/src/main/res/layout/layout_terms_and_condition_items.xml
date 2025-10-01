@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="models"
+            type="com.gogulf.passenger.app.ui.legals.LegalModels" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/m_5dp"
+        android:layout_marginBottom="@dimen/m_10dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/m_10dp">
+
+        <TextView
+            android:id="@+id/mainTitle"
+            style="@style/textStyle20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/av_heavy_800"
+            android:textColor="@color/btnGS"
+            android:text="@{models.mainTitles}"
+            tools:text="Heading" />
+
+        <TextView
+            android:id="@+id/subTitle"
+            style="@style/normal18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m_10dp"
+            android:fontFamily="@font/av_black_700"
+            android:textColor="@color/btnGS"
+            android:text="@{models.subTitles}"
+            tools:text="sub heading" />
+
+        <TextView
+            android:id="@+id/content"
+            style="@style/textStyle16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m_10dp"
+            android:fontFamily="@font/av_regular_400"
+            android:text="@{models.contents}"
+            tools:text="content" />
+
+    </LinearLayout>
+</layout>

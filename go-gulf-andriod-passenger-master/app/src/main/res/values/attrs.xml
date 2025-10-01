@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="label" format="string" />
+    <attr name="hint" format="string" />
+    <attr name="textColor" format="color" />
+
+    <!--  <declare-styleable name="BottomButtonComponent">
+          <attr name="label" />
+      </declare-styleable>
+      <declare-styleable name="TextButton">
+          <attr name="label" />
+      </declare-styleable>
+
+      <declare-styleable name="ToolbarComponent">
+          <attr name="label" />
+      </declare-styleable>-->
+
+    <declare-styleable name="EditTextComponent">
+        <attr name="hint" />
+    </declare-styleable>
+
+    <!--    <declare-styleable name="CustomButtonsOutline">
+            <attr name="label" />
+        </declare-styleable>-->
+
+    <declare-styleable name="PrimaryButton">
+        <attr name="buttonLabel" format="string" localization="suggested" />
+        <attr name="trailingIcon" format="integer" />
+        <attr name="primaryBackground" format="reference|color" />
+        <attr name="labelColor" format="reference|color"/>
+        <attr name="extraInfo" format="string" localization="suggested" />
+
+    </declare-styleable>
+    <declare-styleable name="SecondaryButton">
+        <attr name="secondaryButtonLabel" format="string" localization="suggested" />
+
+    </declare-styleable>
+    <declare-styleable name="CustomEditText">
+        <attr name="hintLabel" format="string" localization="suggested" />
+        <attr name="isGravityCenter" format="boolean" />
+        <attr name="maxLength" format="integer" />
+        <attr name="inputType" format="integer" />
+        <attr name="informationText" format="string" localization="suggested" />
+        <attr name="mainRohanText" format="string" localization="suggested" />
+        <attr name="isMonthYear" format="boolean" />
+        <attr name="isEnterIconVisible" format="boolean" />
+
+        <!--
+            inputType = 1 == PhoneNumber
+            inputType = 2 == EmailAddress
+            inputType = 3 == Password
+         -->
+    </declare-styleable>
+
+</resources>

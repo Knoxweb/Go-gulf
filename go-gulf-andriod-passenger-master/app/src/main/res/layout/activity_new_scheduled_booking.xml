@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="noData"
+            type="String" />
+
+        <variable
+            name="activity"
+            type="com.gogulf.passenger.app.ui.schedulebooking.activity.NewScheduledBookingActivity" />
+
+        <variable
+            name="viewModel"
+            type="com.gogulf.passenger.app.ui.schedulebooking.activity.ScheduledBookingViewModel" />
+
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_gradient"
+        tools:context="com.gogulf.passenger.app.ui.schedulebooking.activity.NewScheduledBookingActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/layout_toolbar"
+                app:done="@{@string/empty}"
+                app:onBackPressed="@{()-> viewModel.validate(activity)}"
+                app:title="@{@string/scheduledBooking}" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/historyRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/m_20dp"
+                tools:itemCount="3"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/layout_booking_item_scheduled" />
+
+            <include
+                android:id="@+id/noDataLayout"
+                layout="@layout/layout_no_list_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/m_20dp"
+                android:layout_marginTop="@dimen/m_20dp"
+                android:visibility="gone"
+                app:hint="@{noData}" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

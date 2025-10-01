@@ -1,0 +1,791 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		041A37F22D744AB4008329CE /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 041A37F12D744AB4008329CE /* FirebaseAnalytics */; };
+		041A37F42D744AB4008329CE /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 041A37F32D744AB4008329CE /* FirebaseAppCheck */; };
+		041A37F62D744AB4008329CE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 041A37F52D744AB4008329CE /* FirebaseAuth */; };
+		041A37F82D744AB4008329CE /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 041A37F72D744AB4008329CE /* FirebaseCore */; };
+		041A37FA2D744AB4008329CE /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 041A37F92D744AB4008329CE /* FirebaseCrashlytics */; };
+		041A37FC2D744AB4008329CE /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 041A37FB2D744AB4008329CE /* FirebaseDatabase */; };
+		041A37FE2D744AB4008329CE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 041A37FD2D744AB4008329CE /* FirebaseFirestore */; };
+		041A38002D744AB4008329CE /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = 041A37FF2D744AB4008329CE /* FirebaseInstallations */; };
+		041A38022D744AB4008329CE /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 041A38012D744AB4008329CE /* FirebaseMessaging */; };
+		041A38042D744AB4008329CE /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 041A38032D744AB4008329CE /* FirebaseRemoteConfig */; };
+		0453EFB82D53AB1F009FC6E6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0453EFB72D53AB1F009FC6E6 /* Alamofire */; };
+		0453EFCE2D53ACF0009FC6E6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0453EFCD2D53ACF0009FC6E6 /* Kingfisher */; };
+		04C2AF1C2D53B1DB00EC825F /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 04C2AF1B2D53B1DB00EC825F /* GoogleMaps */; };
+		04C2AF1F2D53B33F00EC825F /* GooglePlaces in Frameworks */ = {isa = PBXBuildFile; productRef = 04C2AF1E2D53B33F00EC825F /* GooglePlaces */; };
+		04C2AF222D53B50400EC825F /* Stripe in Frameworks */ = {isa = PBXBuildFile; productRef = 04C2AF212D53B50400EC825F /* Stripe */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0453EDDF2D53A5AF009FC6E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0453EDC62D53A5AD009FC6E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0453EDCD2D53A5AD009FC6E6;
+			remoteInfo = "Go GulfCoast";
+		};
+		0453EDE92D53A5AF009FC6E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0453EDC62D53A5AD009FC6E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0453EDCD2D53A5AD009FC6E6;
+			remoteInfo = "Go GulfCoast";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0453EDCE2D53A5AD009FC6E6 /* Go GulfCoast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Go GulfCoast.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0453EDDE2D53A5AF009FC6E6 /* Go GulfCoastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Go GulfCoastTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0453EDE82D53A5AF009FC6E6 /* Go GulfCoastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Go GulfCoastUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		041F19FC2D68C970006972DD /* Exceptions for "Go GulfCoast" folder in "Go GulfCoast" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 0453EDCD2D53A5AD009FC6E6 /* Go GulfCoast */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		0453EDD02D53A5AD009FC6E6 /* Go GulfCoast */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				041F19FC2D68C970006972DD /* Exceptions for "Go GulfCoast" folder in "Go GulfCoast" target */,
+			);
+			path = "Go GulfCoast";
+			sourceTree = "<group>";
+		};
+		0453EDE12D53A5AF009FC6E6 /* Go GulfCoastTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Go GulfCoastTests";
+			sourceTree = "<group>";
+		};
+		0453EDEB2D53A5AF009FC6E6 /* Go GulfCoastUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Go GulfCoastUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0453EDCB2D53A5AD009FC6E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0453EFB82D53AB1F009FC6E6 /* Alamofire in Frameworks */,
+				04C2AF222D53B50400EC825F /* Stripe in Frameworks */,
+				041A38022D744AB4008329CE /* FirebaseMessaging in Frameworks */,
+				041A38002D744AB4008329CE /* FirebaseInstallations in Frameworks */,
+				041A37F22D744AB4008329CE /* FirebaseAnalytics in Frameworks */,
+				04C2AF1C2D53B1DB00EC825F /* GoogleMaps in Frameworks */,
+				041A37F42D744AB4008329CE /* FirebaseAppCheck in Frameworks */,
+				041A37FE2D744AB4008329CE /* FirebaseFirestore in Frameworks */,
+				04C2AF1F2D53B33F00EC825F /* GooglePlaces in Frameworks */,
+				041A38042D744AB4008329CE /* FirebaseRemoteConfig in Frameworks */,
+				0453EFCE2D53ACF0009FC6E6 /* Kingfisher in Frameworks */,
+				041A37FA2D744AB4008329CE /* FirebaseCrashlytics in Frameworks */,
+				041A37FC2D744AB4008329CE /* FirebaseDatabase in Frameworks */,
+				041A37F82D744AB4008329CE /* FirebaseCore in Frameworks */,
+				041A37F62D744AB4008329CE /* FirebaseAuth in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0453EDDB2D53A5AF009FC6E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0453EDE52D53A5AF009FC6E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0453EDC52D53A5AD009FC6E6 = {
+			isa = PBXGroup;
+			children = (
+				0453EDD02D53A5AD009FC6E6 /* Go GulfCoast */,
+				0453EDE12D53A5AF009FC6E6 /* Go GulfCoastTests */,
+				0453EDEB2D53A5AF009FC6E6 /* Go GulfCoastUITests */,
+				0453EDCF2D53A5AD009FC6E6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0453EDCF2D53A5AD009FC6E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0453EDCE2D53A5AD009FC6E6 /* Go GulfCoast.app */,
+				0453EDDE2D53A5AF009FC6E6 /* Go GulfCoastTests.xctest */,
+				0453EDE82D53A5AF009FC6E6 /* Go GulfCoastUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0453EDCD2D53A5AD009FC6E6 /* Go GulfCoast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0453EDF22D53A5AF009FC6E6 /* Build configuration list for PBXNativeTarget "Go GulfCoast" */;
+			buildPhases = (
+				0453EDCA2D53A5AD009FC6E6 /* Sources */,
+				0453EDCB2D53A5AD009FC6E6 /* Frameworks */,
+				0453EDCC2D53A5AD009FC6E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				0453EDD02D53A5AD009FC6E6 /* Go GulfCoast */,
+			);
+			name = "Go GulfCoast";
+			packageProductDependencies = (
+				0453EFB72D53AB1F009FC6E6 /* Alamofire */,
+				0453EFCD2D53ACF0009FC6E6 /* Kingfisher */,
+				04C2AF1B2D53B1DB00EC825F /* GoogleMaps */,
+				04C2AF1E2D53B33F00EC825F /* GooglePlaces */,
+				04C2AF212D53B50400EC825F /* Stripe */,
+				041A37F12D744AB4008329CE /* FirebaseAnalytics */,
+				041A37F32D744AB4008329CE /* FirebaseAppCheck */,
+				041A37F52D744AB4008329CE /* FirebaseAuth */,
+				041A37F72D744AB4008329CE /* FirebaseCore */,
+				041A37F92D744AB4008329CE /* FirebaseCrashlytics */,
+				041A37FB2D744AB4008329CE /* FirebaseDatabase */,
+				041A37FD2D744AB4008329CE /* FirebaseFirestore */,
+				041A37FF2D744AB4008329CE /* FirebaseInstallations */,
+				041A38012D744AB4008329CE /* FirebaseMessaging */,
+				041A38032D744AB4008329CE /* FirebaseRemoteConfig */,
+			);
+			productName = "Go GulfCoast";
+			productReference = 0453EDCE2D53A5AD009FC6E6 /* Go GulfCoast.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0453EDDD2D53A5AF009FC6E6 /* Go GulfCoastTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0453EDF52D53A5AF009FC6E6 /* Build configuration list for PBXNativeTarget "Go GulfCoastTests" */;
+			buildPhases = (
+				0453EDDA2D53A5AF009FC6E6 /* Sources */,
+				0453EDDB2D53A5AF009FC6E6 /* Frameworks */,
+				0453EDDC2D53A5AF009FC6E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0453EDE02D53A5AF009FC6E6 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0453EDE12D53A5AF009FC6E6 /* Go GulfCoastTests */,
+			);
+			name = "Go GulfCoastTests";
+			packageProductDependencies = (
+			);
+			productName = "Go GulfCoastTests";
+			productReference = 0453EDDE2D53A5AF009FC6E6 /* Go GulfCoastTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0453EDE72D53A5AF009FC6E6 /* Go GulfCoastUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0453EDF82D53A5AF009FC6E6 /* Build configuration list for PBXNativeTarget "Go GulfCoastUITests" */;
+			buildPhases = (
+				0453EDE42D53A5AF009FC6E6 /* Sources */,
+				0453EDE52D53A5AF009FC6E6 /* Frameworks */,
+				0453EDE62D53A5AF009FC6E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0453EDEA2D53A5AF009FC6E6 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0453EDEB2D53A5AF009FC6E6 /* Go GulfCoastUITests */,
+			);
+			name = "Go GulfCoastUITests";
+			packageProductDependencies = (
+			);
+			productName = "Go GulfCoastUITests";
+			productReference = 0453EDE82D53A5AF009FC6E6 /* Go GulfCoastUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0453EDC62D53A5AD009FC6E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					0453EDCD2D53A5AD009FC6E6 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					0453EDDD2D53A5AF009FC6E6 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 0453EDCD2D53A5AD009FC6E6;
+					};
+					0453EDE72D53A5AF009FC6E6 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 0453EDCD2D53A5AD009FC6E6;
+					};
+				};
+			};
+			buildConfigurationList = 0453EDC92D53A5AD009FC6E6 /* Build configuration list for PBXProject "Go GulfCoast" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0453EDC52D53A5AD009FC6E6;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				0453EFB62D53AB1F009FC6E6 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				0453EFCC2D53ACF0009FC6E6 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				04C2AF1A2D53B1DB00EC825F /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
+				04C2AF1D2D53B33F00EC825F /* XCRemoteSwiftPackageReference "ios-places-sdk" */,
+				04C2AF202D53B50400EC825F /* XCRemoteSwiftPackageReference "stripe-ios" */,
+				041A37F02D744AB4008329CE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 0453EDCF2D53A5AD009FC6E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0453EDCD2D53A5AD009FC6E6 /* Go GulfCoast */,
+				0453EDDD2D53A5AF009FC6E6 /* Go GulfCoastTests */,
+				0453EDE72D53A5AF009FC6E6 /* Go GulfCoastUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0453EDCC2D53A5AD009FC6E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0453EDDC2D53A5AF009FC6E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0453EDE62D53A5AF009FC6E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0453EDCA2D53A5AD009FC6E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0453EDDA2D53A5AF009FC6E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0453EDE42D53A5AF009FC6E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0453EDE02D53A5AF009FC6E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0453EDCD2D53A5AD009FC6E6 /* Go GulfCoast */;
+			targetProxy = 0453EDDF2D53A5AF009FC6E6 /* PBXContainerItemProxy */;
+		};
+		0453EDEA2D53A5AF009FC6E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0453EDCD2D53A5AD009FC6E6 /* Go GulfCoast */;
+			targetProxy = 0453EDE92D53A5AF009FC6E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0453EDF02D53A5AF009FC6E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0453EDF12D53A5AF009FC6E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0453EDF32D53A5AF009FC6E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Go GulfCoast/Go GulfCoast.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1000050;
+				DEVELOPMENT_ASSET_PATHS = "\"Go GulfCoast/Preview Content\"";
+				DEVELOPMENT_TEAM = YQGQU3RV34;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Go-GulfCoast-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				INFOPLIST_KEY_NSCameraUsageDescription = "To upload the profile photo";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "To share your location to the driver";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To share your location to the driver";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "To upload your profile picture";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.050;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gogulf.bluestoneapps;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		0453EDF42D53A5AF009FC6E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Go GulfCoast/Go GulfCoast.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1000050;
+				DEVELOPMENT_ASSET_PATHS = "\"Go GulfCoast/Preview Content\"";
+				DEVELOPMENT_TEAM = YQGQU3RV34;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Go-GulfCoast-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				INFOPLIST_KEY_NSCameraUsageDescription = "To upload the profile photo";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "To share your location to the driver";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To share your location to the driver";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "To upload your profile picture";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.050;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gogulf.bluestoneapps;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		0453EDF62D53A5AF009FC6E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6HY69CR885;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com..Go-GulfCoastTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Go GulfCoast.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Go GulfCoast";
+			};
+			name = Debug;
+		};
+		0453EDF72D53A5AF009FC6E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6HY69CR885;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com..Go-GulfCoastTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Go GulfCoast.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Go GulfCoast";
+			};
+			name = Release;
+		};
+		0453EDF92D53A5AF009FC6E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6HY69CR885;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com..Go-GulfCoastUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Go GulfCoast";
+			};
+			name = Debug;
+		};
+		0453EDFA2D53A5AF009FC6E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6HY69CR885;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com..Go-GulfCoastUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Go GulfCoast";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0453EDC92D53A5AD009FC6E6 /* Build configuration list for PBXProject "Go GulfCoast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0453EDF02D53A5AF009FC6E6 /* Debug */,
+				0453EDF12D53A5AF009FC6E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0453EDF22D53A5AF009FC6E6 /* Build configuration list for PBXNativeTarget "Go GulfCoast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0453EDF32D53A5AF009FC6E6 /* Debug */,
+				0453EDF42D53A5AF009FC6E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0453EDF52D53A5AF009FC6E6 /* Build configuration list for PBXNativeTarget "Go GulfCoastTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0453EDF62D53A5AF009FC6E6 /* Debug */,
+				0453EDF72D53A5AF009FC6E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0453EDF82D53A5AF009FC6E6 /* Build configuration list for PBXNativeTarget "Go GulfCoastUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0453EDF92D53A5AF009FC6E6 /* Debug */,
+				0453EDFA2D53A5AF009FC6E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		041A37F02D744AB4008329CE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.9.0;
+			};
+		};
+		0453EFB62D53AB1F009FC6E6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+		0453EFCC2D53ACF0009FC6E6 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.2.0;
+			};
+		};
+		04C2AF1A2D53B1DB00EC825F /* XCRemoteSwiftPackageReference "ios-maps-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googlemaps/ios-maps-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.3.0;
+			};
+		};
+		04C2AF1D2D53B33F00EC825F /* XCRemoteSwiftPackageReference "ios-places-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googlemaps/ios-places-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.3.0;
+			};
+		};
+		04C2AF202D53B50400EC825F /* XCRemoteSwiftPackageReference "stripe-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stripe/stripe-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 24.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		041A37F12D744AB4008329CE /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041A37F02D744AB4008329CE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		041A37F32D744AB4008329CE /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041A37F02D744AB4008329CE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		041A37F52D744AB4008329CE /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041A37F02D744AB4008329CE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		041A37F72D744AB4008329CE /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041A37F02D744AB4008329CE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		041A37F92D744AB4008329CE /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041A37F02D744AB4008329CE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		041A37FB2D744AB4008329CE /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041A37F02D744AB4008329CE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		041A37FD2D744AB4008329CE /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041A37F02D744AB4008329CE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		041A37FF2D744AB4008329CE /* FirebaseInstallations */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041A37F02D744AB4008329CE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseInstallations;
+		};
+		041A38012D744AB4008329CE /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041A37F02D744AB4008329CE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		041A38032D744AB4008329CE /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041A37F02D744AB4008329CE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		0453EFB72D53AB1F009FC6E6 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0453EFB62D53AB1F009FC6E6 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		0453EFCD2D53ACF0009FC6E6 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0453EFCC2D53ACF0009FC6E6 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		04C2AF1B2D53B1DB00EC825F /* GoogleMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04C2AF1A2D53B1DB00EC825F /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
+			productName = GoogleMaps;
+		};
+		04C2AF1E2D53B33F00EC825F /* GooglePlaces */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04C2AF1D2D53B33F00EC825F /* XCRemoteSwiftPackageReference "ios-places-sdk" */;
+			productName = GooglePlaces;
+		};
+		04C2AF212D53B50400EC825F /* Stripe */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04C2AF202D53B50400EC825F /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = Stripe;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 0453EDC62D53A5AD009FC6E6 /* Project object */;
+}

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="textStyle16">
+        <item name="android:fontFamily">@font/av_regular_400</item>
+        <item name="android:textSize">@dimen/t_16sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="textStyle16m">
+        <item name="android:fontFamily">@font/av_medium_500</item>
+        <item name="android:textSize">@dimen/t_16sp</item>
+
+    </style>
+
+    <style name="textStyle18">
+        <item name="android:fontFamily">@font/av_regular_400</item>
+        <item name="android:textSize">@dimen/t_18sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <!--
+        <style name="skipTextStyle18">
+            <item name="android:fontFamily">@font/roboto_medium_500</item>
+            <item name="android:textSize">@dimen/t_18sp</item>
+            <item name="android:textColor">@color/skip_color</item>
+            <item name="android:text">Skip</item>
+
+        </style>-->
+
+    <style name="textStyle14">
+        <item name="android:fontFamily">@font/av_regular_400</item>
+        <item name="android:textSize">@dimen/t_14sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlActivated">@color/btnGS</item>
+        <item name="android:colorControlNormal">@color/black</item>
+    </style>
+
+    <style name="textStyle13">
+        <item name="android:fontFamily">@font/av_light_300</item>
+        <item name="android:textSize">@dimen/t_13sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="textStyle12">
+        <item name="android:fontFamily">@font/av_regular_400</item>
+        <item name="android:textSize">@dimen/t_12sp</item>
+    </style>
+
+    <style name="textStyle10">
+        <item name="android:fontFamily">@font/av_regular_400</item>
+        <item name="android:textSize">@dimen/t_10sp</item>
+    </style>
+
+    <style name="textStyle24">
+        <item name="android:fontFamily">@font/av_regular_400</item>
+        <item name="android:textSize">@dimen/t_24sp</item>
+    </style>
+
+    <style name="textStyle20">
+        <item name="android:fontFamily">@font/av_regular_400</item>
+        <item name="android:textSize">@dimen/t_20sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="textStyle22">
+        <item name="android:fontFamily">@font/av_regular_400</item>
+        <item name="android:textSize">@dimen/t_22sp</item>
+    </style>
+
+    <style name="btnStyle">
+        <item name="android:fontFamily">@font/av_black_700</item>
+        <item name="android:textSize">@dimen/t_20sp</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+
+    <style name="bold_16">
+        <item name="android:fontFamily">@font/av_book_600</item>
+        <item name="android:textSize">@dimen/t_16sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    
+    <style name="doneButtonStyle">
+        <item name="android:fontFamily">@font/av_black_700</item>
+        <item name="android:textSize">@dimen/t_20sp</item>
+        <item name="android:textColor">@color/gsBackground</item>
+        <item name="android:paddingHorizontal">@dimen/m_20dp</item>
+        <item name="android:paddingVertical">@dimen/m_5dp</item>
+        <item name="android:minHeight">@dimen/m_40dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="label18">
+        <item name="android:fontFamily">@font/av_heavy_800</item>
+        <item name="android:textSize">@dimen/t_18sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="normal18">
+        <item name="android:fontFamily">@font/av_light_300</item>
+        <item name="android:textSize">@dimen/t_16sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+    <style name="MyTimePickerStyle" parent="android:Widget.Material.Light.TimePicker">
+        <item name="android:timePickerMode">spinner</item>
+        <item name="fontFamily">@font/av_regular_400</item>
+    </style>
+
+    <style name="MyDatePickerStyle" parent="android:Widget.Material.Light.DatePicker">
+        <!--        <item name="android:datePickerMode">spinner</item>-->
+        <item name="android:fontFamily">@font/av_regular_400</item>
+    </style>
+
+    <!--
+        <style name="SwitchTextAppearance" parent="@android:style/TextAppearance.Holo.Small">
+            <item name="android:textColor">@drawable/text_color_selector</item>
+            <item name="android:textSize">14sp</item>
+        </style>
+    -->
+
+    <style name="CustomTabTextAppearance" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">@font/av_medium_500</item>
+        <item name="android:fontFamily">@font/av_medium_500</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:fontFamily">@font/av_medium_500</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <!--    <style name="Theme.Custom" parent="Theme.CTPLimo">
+            <item name="android:calendarViewStyle">@style/Widget.CalendarView.Custom</item>
+        </style>-->
+
+    <!--   <style name="MyCalenderTheme" parent="android:Widget.CalendarView">
+           <item name="android:focusedMonthDateColor">@color/black</item>
+           <item name="android:weekNumberColor">@color/red</item>
+           <item name="android:weekDayTextAppearance">@style/TextAppearance.Medium</item>
+           <item name="android:dateTextAppearance">@style/TextAppearance.Medium</item>
+       </style>-->
+
+    <style name="MyCalendarViewTheme" parent="android:Widget.CalendarView">
+        <item name="colorPrimary">@color/red</item>
+        <item name="colorPrimaryDark">@color/red</item>
+        <item name="android:textColorPrimary">@color/btnGS</item>
+        <item name="colorAccent">@color/btnGS</item>
+        <!--        <item name="android:headerBackground">@drawable/ic_background_login_edittext</item>-->
+        <item name="android:dateTextAppearance">@style/MyCalendarViewDateTextAppearance</item>
+    </style>
+
+    <style name="CalenderViewDateCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:weekNumberColor">@color/red</item>
+    </style>
+
+    <style name="CalenderViewWeekCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="MyCalendarViewDateTextAppearance">
+        <item name="android:textColor">@color/gsBackground</item>
+    </style>
+
+    <style name="Theme.CTPLimo.DateWidget" parent="android:Widget.Material.DatePicker">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/black</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <!--        <item name="android:timePickerStyle">@style/MyTimePickerStyle</item>-->
+        <!-- Customize your theme here. -->
+    </style>
+
+
+    <style name="TopCornersRounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">16dp</item>
+        <item name="cornerSizeTopRight">16dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="toolbarViewModel"
+            type="com.gogulf.passenger.app.ui.base.CommonViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_gradient">
+
+
+        <LinearLayout
+            android:id="@+id/mainContainer"
+            android:fitsSystemWindows="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/layout_toolbar"
+                app:clicked="@{()-> toolbarViewModel.onValidated()}"
+                app:done="@{@string/done}"
+                app:onBackPressed="@{()-> toolbarViewModel.onBackPress()}"
+                app:title="@{title}" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_gradient"
+                android:fillViewport="true">
+
+
+                <LinearLayout
+                    android:id="@+id/bodyLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/m_20dp"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/m_10dp">
+
+
+                    <com.gogulf.passenger.app.utils.customcomponents.EditTextComponent
+                        android:id="@+id/cardNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hint="Enter The Card Number" />
+
+                    <com.gogulf.passenger.app.utils.customcomponents.EditTextComponent
+                        android:id="@+id/holdername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/m_30dp"
+                        app:hint="Holder's Name" />
+
+                    <include
+                        android:id="@+id/cardExpiry"
+                        layout="@layout/layout_card_expiry_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/m_30dp" />
+
+                    <com.gogulf.passenger.app.utils.customcomponents.EditTextComponent
+                        android:id="@+id/cvc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/m_30dp"
+                        app:hint="CVC" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cardActiveContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="2dp"
+                        android:layout_marginTop="@dimen/m_30dp"
+                        android:background="@drawable/ic_background_login_edittext"
+                        android:minHeight="@dimen/m_50dp"
+                        android:padding="@dimen/m_5dp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toTopOf="@id/errorText"
+                        app:layout_constraintTop_toBottomOf="@id/hintTextView">
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/active_switch"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="@dimen/m_15dp"
+                            android:fontFamily="@font/av_regular_400"
+                            android:text="Set this card to active"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/t_14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:thumbTint="@color/switch_thumb_selector"
+                            app:trackTint="@color/switch_track_selector" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </LinearLayout>
+
+
+            </ScrollView>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</layout>

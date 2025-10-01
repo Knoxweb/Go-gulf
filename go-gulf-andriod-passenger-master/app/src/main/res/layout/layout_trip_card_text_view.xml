@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="topData"
+            type="String" />
+
+        <variable
+            name="bottomData"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/trip_card_background"
+        android:paddingHorizontal="@dimen/m_15dp"
+        android:paddingVertical="@dimen/m_10dp">
+
+        <TextView
+            android:id="@+id/idLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/m_5dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/av_regular_400"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:paddingVertical="@dimen/m_5dp"
+            android:text="@string/_324568"
+            android:textColor="@color/black"
+            android:textSize="@dimen/t_16sp"
+            app:layout_constraintBottom_toTopOf="@id/bookingSeparator"
+            app:layout_constraintEnd_toStartOf="@id/idValue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/idValue"
+            android:layout_width="@dimen/m_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/m_10dp"
+            android:fontFamily="@font/av_regular_400"
+            android:gravity="end|center_vertical"
+            android:paddingVertical="@dimen/m_5dp"
+            android:text="@{topData}"
+            android:textColor="@color/primaryColor"
+            android:textSize="@dimen/t_16sp"
+            app:layout_constraintBottom_toBottomOf="@id/bookingSeparator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/idLabel"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/bookingSeparator"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m_1dp"
+            android:layout_marginHorizontal="@dimen/m_5dp"
+            android:background="@color/dividerColor"
+            app:layout_constraintBottom_toTopOf="@id/value"
+            app:layout_constraintTop_toBottomOf="@id/idValue" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/m_5dp"
+            android:layout_marginTop="@dimen/m_5dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/av_regular_400"
+            android:maxLines="1"
+            android:paddingVertical="@dimen/m_5dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/t_16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/value"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bookingSeparator"
+            tools:text="Pickup Date/Time" />
+
+        <TextView
+            android:id="@+id/value"
+            android:layout_width="@dimen/m_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/m_10dp"
+            android:layout_marginTop="@dimen/m_5dp"
+            android:fontFamily="@font/av_regular_400"
+            android:gravity="end|center_vertical"
+            android:paddingVertical="@dimen/m_5dp"
+            android:text="@{bottomData}"
+            android:textColor="@color/primaryColor"
+            android:textSize="@dimen/t_16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/name"
+            app:layout_constraintTop_toBottomOf="@id/bookingSeparator" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

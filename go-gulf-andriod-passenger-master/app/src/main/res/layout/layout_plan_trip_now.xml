@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/planTripMaterialCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/text_field_new_transparency"
+        app:strokeColor="@color/primaryColor"
+        android:backgroundTint="@color/primary_new"
+        app:strokeWidth="2dp"
+        app:cardCornerRadius="@dimen/text_field_corner_radius_12">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/m_15dp"
+            android:paddingVertical="@dimen/m_10dp">
+
+            <TextView
+                android:layout_width="@dimen/m_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/m_8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/av_heavy_800"
+                android:maxLines="1"
+                android:text="@string/now"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/dateCardView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/dateCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/m_10dp"
+                app:cardBackgroundColor="@color/timeColorNew"
+                app:cardCornerRadius="@dimen/m_10dp"
+                app:cardElevation="@dimen/m_0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/timerCardView"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/dateTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/m_16dp"
+                    android:layout_marginVertical="@dimen/m_5dp"
+                    android:fontFamily="@font/av_medium_500"
+                    android:text="@string/_11_20_am"
+                    android:textColor="@color/subTitleColor"
+                    android:textSize="@dimen/t_16sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/timerCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/timeColorNew"
+                app:cardCornerRadius="@dimen/m_10dp"
+                app:cardElevation="@dimen/m_0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/timeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/m_16dp"
+                    android:layout_marginVertical="@dimen/m_5dp"
+                    android:fontFamily="@font/av_medium_500"
+                    android:text="@string/_11_20_am"
+                    android:textColor="@color/subTitleColor"
+                    android:textSize="@dimen/t_16sp" />
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

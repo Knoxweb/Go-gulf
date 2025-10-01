@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toDestinationCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/m_2dp"
+        android:background="@drawable/ic_background_login_edittext"
+        android:minHeight="@dimen/m_50dp"
+        android:paddingHorizontal="@dimen/m_10dp">
+
+        <TextView
+            android:id="@+id/startFieldLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/m_5dp"
+            android:layout_marginEnd="@dimen/m_10dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/av_regular_400"
+            android:maxLines="1"
+            android:paddingHorizontal="@dimen/m_16dp"
+            android:paddingVertical="@dimen/m_2dp"
+            android:text="@string/pick_up_location"
+            android:textColor="@color/hintColor"
+            android:textSize="@dimen/t_14sp"
+            app:layout_constraintEnd_toStartOf="@id/constraintLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="Autofill" />
+
+        <TextView
+            android:id="@+id/startField"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/m_10dp"
+            android:layout_marginBottom="@dimen/m_5dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/av_regular_400"
+            android:maxLines="1"
+            android:paddingHorizontal="@dimen/m_16dp"
+            android:paddingVertical="@dimen/m_8dp"
+            android:text="@string/select_start_destination"
+            android:textColor="@color/subTitleColor"
+            android:textSize="@dimen/t_16sp"
+            app:layout_constraintEnd_toStartOf="@id/constraintLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/startFieldLabel"
+            tools:ignore="Autofill" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/m_30dp"
+            android:minHeight="@dimen/m_30dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/addViaPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_add_via_point_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/viewDivider"
+            android:layout_width="@dimen/m_0dp"
+            android:layout_height="@dimen/m_1dp"
+            android:background="@color/dividerColor"
+            app:layout_constraintBottom_toTopOf="@id/destinationFieldlabel"
+            app:layout_constraintEnd_toStartOf="@id/constraintLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/startField" />
+
+        <TextView
+            android:id="@+id/destinationFieldlabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/m_5dp"
+            android:layout_marginEnd="@dimen/m_10dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/av_regular_400"
+            android:maxLines="1"
+            android:paddingHorizontal="@dimen/m_16dp"
+            android:paddingVertical="@dimen/m_2dp"
+            android:text="@string/destination"
+            android:textColor="@color/hintColor"
+            android:textSize="@dimen/t_14sp"
+            app:layout_constraintBottom_toTopOf="@id/destinationField"
+            app:layout_constraintEnd_toStartOf="@id/constraintLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/startField"
+            tools:ignore="Autofill" />
+
+        <TextView
+            android:id="@+id/destinationField"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/m_10dp"
+            android:layout_marginBottom="@dimen/m_5dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/av_regular_400"
+            android:maxLines="1"
+            android:paddingHorizontal="@dimen/m_16dp"
+            android:paddingVertical="@dimen/m_8dp"
+            android:text="@string/destination"
+            android:textColor="@color/subTitleColor"
+            android:textSize="@dimen/t_16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/constraintLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/destinationFieldlabel"
+            tools:ignore="Autofill" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

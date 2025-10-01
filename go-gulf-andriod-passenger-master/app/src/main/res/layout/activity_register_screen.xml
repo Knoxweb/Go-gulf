@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="toolbarViewModel"
+            type="com.gogulf.passenger.app.ui.base.CommonViewModel" />
+    </data>
+
+
+    <LinearLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gsBackground"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_toolbar"
+            app:clicked="@{()-> toolbarViewModel.onValidated()}"
+            app:done="@{@string/done}"
+            app:onBackPressed="@{()-> toolbarViewModel.onBackPress()}"
+            app:title="@{@string/register}" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gsBackground"
+            android:fillViewport="true">
+
+
+            <LinearLayout
+                android:id="@+id/bodyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/m_20dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/m_10dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_background_login_edittext"
+                    android:paddingHorizontal="@dimen/m_20dp"
+                    android:paddingVertical="@dimen/m_5dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/userPhoto"
+                        android:layout_width="@dimen/m_100dp"
+                        android:layout_height="@dimen/m_100dp"
+                        android:background="@drawable/ic_ellipse_register"
+                        android:src="@drawable/default_no_image"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/uploadPhotoText"
+                        android:layout_width="@dimen/m_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/m_10dp"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/userPhoto"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/av_medium_500"
+                            android:text="@string/upload_photo"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/t_20sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/av_regular_400"
+                            android:text="@string/upload_pic"
+                            android:textColor="@color/hintColor"
+                            android:textSize="@dimen/t_14sp" />
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.gogulf.passenger.app.utils.customcomponents.EditTextComponent
+                    android:id="@+id/fullname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/m_30dp"
+                    app:hint="Full name" />
+
+                <com.gogulf.passenger.app.utils.customcomponents.EditTextComponent
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/m_30dp"
+                    app:hint="Email" />
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</layout>

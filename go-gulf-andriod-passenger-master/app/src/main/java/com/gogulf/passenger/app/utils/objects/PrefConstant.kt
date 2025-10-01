@@ -1,0 +1,26 @@
+package com.gogulf.passenger.app.utils.objects
+
+object PrefConstant {
+    const val VERIFICATION_ID = "Verification_id"
+    const val RESEND_TOKEN = "Resend_token"
+    const val AUTH_TOKEN = "Auth_token"
+    const val PROFILE_STATUS = "Profile_status"
+    const val FIREBASE_UID = "Firebase_uid"
+    const val MOBILE_NO = "Mobile_no"
+    const val M_CC = "m_cc"
+    const val MOBILE = "mobile"
+    const val SELECT_FLEET_ID = "Fleet_id"
+    const val EMAIL_ADDRESS = "Email_Address"
+    const val FULL_NAME = "Full_name"
+    const val IMAGE = "image"
+    const val LATITUDE = "Latitude"
+    const val LONGITUDE = "Longitude"
+    const val DEVICE_TOKEN = "Device_token"
+    const val PUSHER_CHANNEL = "Pusher_channel"
+    const val SLIDER_INTRO = "Slider_Intro"
+    const val LOCATION_PERMISSION = "Location_Permission"
+    const val TYPE = "type"
+    const val IDENTITY = "identity"
+    const val BOOKING_ID = "bookingId"
+    const val CARD_NUMBER = "card_number"
+}

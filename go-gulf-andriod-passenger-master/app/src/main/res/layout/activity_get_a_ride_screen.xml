@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="name"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--   <View
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:visibility="visible"
+               android:background="@color/red"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintTop_toTopOf="parent" />-->
+
+        <ImageView
+            android:id="@+id/menuBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/m_10dp"
+            android:layout_marginTop="@dimen/m_20dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_menu_map"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/navigationBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/m_20dp"
+            android:layout_marginBottom="@dimen/m_20dp"
+            android:contentDescription="@string/navigationicon"
+            android:src="@drawable/baseline_gps_fixed_24"
+            app:backgroundTint="@color/black"
+            app:layout_constraintBottom_toTopOf="@id/bottomSheetConstraint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tint="@color/black" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottomSheetConstraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_map"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <include
+                android:id="@+id/bottomSheetLayout"
+                layout="@layout/layout_bottom_sheet_get_a_ride"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/m_5dp"
+                android:layout_marginTop="@dimen/m_25dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:name="@{name}" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
